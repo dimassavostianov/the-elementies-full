@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 
 public enum CharacterState
@@ -10,9 +11,9 @@ public enum CharacterState
 public class Character : MonoBehaviour
 {
     [SerializeField] private CharacterAnimationController _animationController;
-    [SerializeField] private CharacterHPStaUI _hpStaUI;
-    [SerializeField] private GameObject _deadIndicator;
-    [SerializeField] private GameObject _choosedIndicator;
+    [SerializeField] private GameObject _hpStaUIObj;
+    [SerializeField] private ElementsDictionary _elemetnsIcons;
+    [SerializeField] private Transform _posForHpUI;
 
     private CharacterState _currentState;
     private Perk _activeDefensePerk;
@@ -23,10 +24,10 @@ public class Character : MonoBehaviour
     public CharacterState CurrentState => _currentState;
     public CharacterRarity Rarity => _rarity;
     public ElementType ElementType => _elementType;
-    public Perk AttackPerk1 => _attackPerk1;
-    public Perk AttackPerk2 => _attackPerk2;
-    public Perk DefensePerk => _defensePerk;
-    public Perk PassivePerk => _passivePerk;
+    public Perk AttackPerk1 => PerkFactory.CreatePerkFormTemplate(_attackPerk1);
+    public Perk AttackPerk2 => PerkFactory.CreatePerkFormTemplate(_attackPerk2);
+    public Perk DefensePerk => PerkFactory.CreatePerkFormTemplate(_defensePerk);
+    public Perk PassivePerk => PerkFactory.CreatePerkFormTemplate(_passivePerk);
     public int Health => _health;
     public int Damage => _damage;
     public int Defense => _defense;
@@ -37,10 +38,10 @@ public class Character : MonoBehaviour
     [SerializeField] private CharacterRarity _rarity;
     [SerializeField] private ElementType _elementType;
 
-    [SerializeField] private Perk _attackPerk1;
-    [SerializeField] private Perk _attackPerk2;
-    [SerializeField] private Perk _defensePerk;
-    [SerializeField] private Perk _passivePerk;
+    [SerializeField] private PerkVariant _attackPerk1;
+    [SerializeField] private PerkVariant _attackPerk2;
+    [SerializeField] private PerkVariant _defensePerk;
+    [SerializeField] private PerkVariant _passivePerk;
 
     [SerializeField] private int _health;
     [SerializeField] private int _damage;
@@ -48,13 +49,16 @@ public class Character : MonoBehaviour
     [SerializeField] private int _power;
     [SerializeField] private int _level;
 
+    private CharacterHPStaUI _hpStaUI;
+    private GameObject _hpStored;
+
     public void SetFieldsByCharacterContructor(
         CharacterRarity rarity,
         ElementType elementType,
-        Perk attackPerk1,
-        Perk attackPerk2,
-        Perk defensePerk,
-        Perk passivePerk,
+        PerkVariant attackPerk1,
+        PerkVariant attackPerk2,
+        PerkVariant defensePerk,
+        PerkVariant passivePerk,
         int health,
         int damage,
         int defense,
@@ -77,35 +81,43 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
-        SetAsUnChoosed();
-        _currentState = CharacterState.Alive;
-        _hpStaUI.SetMaxHealthAndEnergy(Health, Power);
+        try
+        {
+            SetAsUnChoosed();
+            _currentState = CharacterState.Alive;
+            var hpObj = Instantiate(_hpStaUIObj);
+            hpObj.transform.position = _posForHpUI.position;
+            _hpStored = hpObj;
+            _hpStaUI = hpObj.GetComponent<CharacterHPStaUI>();
+            _hpStaUI.SetPRoperties(_health, _power, _elemetnsIcons.GetElementIconByType(_elementType));
+            _animationController.StartRelaxAnimation();
+        }
+        catch (Exception ex)
+        {
+            
+        }
     }
 
     public void XFlip()
     {
-        GetComponent<SpriteRenderer>().flipX = true;
+        _animationController.MakeXFlip();
     }
 
     public void SetAsChoosed()
     {
-        _choosedIndicator.SetActive(true);
     }
 
     public void SetAsUnChoosed()
     {
-        _choosedIndicator.SetActive(false);
     }
 
     public int CalculateDamage()
     {
-        int additionalDamage = 0;
+        int damage = 0;
 
-        if (_activeAttackPerk != null) additionalDamage += _activeAttackPerk.ApplyingDamage;
+        if (_activeAttackPerk != null) damage += _activeAttackPerk.ApplyingDamage;
 
-        if (_activePassivePerk != null) additionalDamage += _activePassivePerk.ApplyingDamage;
-
-        int damage = _damage + additionalDamage;
+        if (_activePassivePerk != null) damage += _activePassivePerk.ApplyingDamage;
 
         return damage;
     }
@@ -118,16 +130,30 @@ public class Character : MonoBehaviour
 
         if (_activePassivePerk != null) additionDefense += _activePassivePerk.ApplyingDefense;
 
-        _health -= value * (1 - ((_defense + additionDefense) / 100));
+        value = (int)(value * (1 - ((float)(_defense + additionDefense) / 100)));
+
+        _health -= value;
 
         _activeDefensePerk = null;
 
         _hpStaUI.UpdateHealth(Health);
 
+        _animationController.StartTakingDamageAnimation();
+
         if (_health <= 0)
         {
             SetAsDead();
         }
+    }
+
+    public void PlayMeleeAttack(Vector3 vector)
+    {
+        _animationController.StartMeleeAttackAnimation(vector);
+    }
+
+    public void PlayCastAnim()
+    {
+        _animationController.StartCastAnimation();
     }
 
     public void SetActiveDefensePerk(Perk perk)
@@ -165,6 +191,17 @@ public class Character : MonoBehaviour
     private void SetAsDead()
     {
         _currentState = CharacterState.Dead;
-        _deadIndicator.SetActive(true);
+        Destroy(_hpStored);
+        _animationController.StartDeathAnimation();
+    }
+
+    private void OnDestroy()
+    {
+        try
+        {
+            Destroy(_hpStored);
+        }
+        catch (Exception ex)
+        { }
     }
 }

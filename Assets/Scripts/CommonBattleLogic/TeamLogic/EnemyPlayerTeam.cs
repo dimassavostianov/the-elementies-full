@@ -1,5 +1,9 @@
 ﻿public class EnemyPlayerTeam : AbstractTeam
 {
+    public override void MakeDamagePlayer()
+    {
+    }
+
     public override bool TryActivateTeamTurn(ElementType characterType)
     {
         return false;

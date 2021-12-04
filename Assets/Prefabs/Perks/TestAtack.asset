@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c71922865a9b0a4b881202c90489b11, type: 3}
+  m_Name: TestAtack
+  m_EditorClassIdentifier: 
+  PerkType: 0
+  AttackType: 0
+  Icon: {fileID: 21300000, guid: aade38c1ee354914bbb9555336796616, type: 3}
+  VisualEffect: {fileID: 0}
+  Discription: {fileID: 11400000, guid: a04f45ccb96bdf74db5174050c4ee18d, type: 2}
+  Name: TestAttack
+  ApplyingDamage: 20
+  ApplyingDefense: 0
+  ApplyingEnergy: 20
+  Level: 0
+  IsTest: 1

@@ -6,14 +6,18 @@ public static class PerkFactory
 {
     public static Perk CreatePerkFormTemplate (PerkVariant perkVariant)
     {
-        var perk = new Perk(perkVariant.PerkType,
+        var perk = new Perk(
+            perkVariant.PerkType,
+            perkVariant.AttackType,
             perkVariant.Icon,
-            perkVariant.Particles,
+            perkVariant.VisualEffect,
+            perkVariant.Discription,
             perkVariant.Name,
             perkVariant.ApplyingDamage,
             perkVariant.ApplyingDefense,
             perkVariant.ApplyingEnergy,
-            perkVariant.Level);
+            perkVariant.Level,
+            perkVariant.IsTest);
 
         return perk;
     }

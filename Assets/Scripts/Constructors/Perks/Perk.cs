@@ -5,13 +5,18 @@ using System;
 
 public enum PerkType
 {
-    Attack,
+    AttackOne,
+    AttackAll,
     Defense,
     Passive
 }
 
-//ÏÅÐÂÀ ÈÒÅÐÀÖÈß ÒÎËÜÊÎ
-[Serializable]
+public enum AttackType
+{
+    Meele,
+    Distance,
+}
+
 public class Perk
 {
     public string Name => _name;
@@ -19,45 +24,64 @@ public class Perk
     public int ApplyingDefense => _applyingDefense;
     public int ApplyingEnergy => _applyingEnergy;
     public int Level => _level;
+    public bool IsTest => _isTest;
 
-    public /*readonly*/ PerkType Type;
+    public readonly PerkType Type;
+    public readonly AttackType AttackType;
 
-    public /*readonly*/ Sprite Icon;
-    public /*readonly*/ ParticleSystem Particles;
+    public readonly Sprite Icon;
+    public readonly PerkVisualEffect VisualEffect;
+    public readonly PerkDiscription Discription;
 
     [SerializeField] private string _name;
     [SerializeField] private int _applyingDamage;
     [SerializeField] private int _applyingDefense;
     [SerializeField] private int _applyingEnergy;
     [SerializeField] private int _level;
+    private bool _isTest;
 
     public Perk(PerkType type,
+        AttackType attackType,
         Sprite icon,
-        ParticleSystem particles,
+        PerkVisualEffect visualEffect,
+        PerkDiscription perkDiscription,
         string name,
         int damage,
         int defense,
         int energy, 
-        int level)
+        int level,
+        bool isTest)
         : this(damage, defense, energy)
     {
         Type = type;
+        AttackType = attackType;
         Icon = icon;
-        Particles = particles;
+        VisualEffect = visualEffect;
+        Discription = perkDiscription;
         _level = level;
         _name = name;
+        _isTest = isTest;
     }
 
     private Perk(int damage, int defense, int energy)
     {
-        if (damage > 0) _applyingDamage = damage;
-        else _applyingDamage = 1;
+        if (damage >= 0) _applyingDamage = damage;
+        else _applyingDamage = 0;
 
-        if (defense > 0) _applyingDefense = defense;
-        else _applyingDefense = 1;
+        if (defense >= 0) _applyingDefense = defense;
+        else _applyingDefense = 0;
 
-        if (energy > 0) _applyingEnergy = energy;
-        else _applyingEnergy = 1;
+        if (energy >= 0) _applyingEnergy = energy;
+        else _applyingEnergy = 0;
+    }
+
+    public PerkVisualEffect ActivateVisualEffect(Vector3 startPos, Vector3 enemyPos)
+    {
+        var effectGameObj = GameObject.Instantiate(VisualEffect.gameObject);
+        var effect = effectGameObj.GetComponent<PerkVisualEffect>();
+        effect.StartEffect(startPos, enemyPos);
+
+        return effect;
     }
 
     public static Perk operator +(Perk a, Perk b) => new Perk

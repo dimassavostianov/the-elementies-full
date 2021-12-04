@@ -42,7 +42,7 @@ public class CharacterConstructor : MonoBehaviour
         _defensePerk = PerkFactory.CreatePerkFormTemplate(_variant.DefensePerk);
         _passivePerk = PerkFactory.CreatePerkFormTemplate(_variant.PassivePerk);
 
-        _character.SetFieldsByCharacterContructor(
+        /*_character.SetFieldsByCharacterContructor(
             _variant.Rarity,
             _variant.ElementType,
             _attackPerk1,
@@ -53,9 +53,10 @@ public class CharacterConstructor : MonoBehaviour
             _variant.Damage,
             _variant.Defense,
             _variant.Power,
-            _variant.Level);
+            _variant.Level);*/
     }
 
+#if UNITY_EDITOR
     public void SaveVariantAsPrefab()
     {
         try
@@ -88,4 +89,5 @@ public class CharacterConstructor : MonoBehaviour
             Debug.LogError(ex.Message);
         }
     }
+#endif
 }

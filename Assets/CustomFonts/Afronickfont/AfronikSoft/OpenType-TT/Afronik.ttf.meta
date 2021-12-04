@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 87c39c77e05a2eb40b04fbb7a026875a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Afronik Soft
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b21f1adb2ef86e4488e6820b0f01c66d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

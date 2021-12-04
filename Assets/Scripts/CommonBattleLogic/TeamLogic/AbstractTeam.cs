@@ -7,13 +7,13 @@ public abstract class AbstractTeam : MonoBehaviour
 {
     public event Action<Perk[]> ActiveCharacterUpdatedUI;
     public event Action CharacterDied;
-    public event Action<int> ActiveCharacterAttack;
-    public event Action TurnEndedWithoutAttack;
-    public event Action TeamDefeated;
+    public event Action TeamEndedTurn;
 
     [SerializeField] private Transform[] _positionsForTeam;
     [SerializeField] private Character[] _charactersInTeam = new Character[3];
+    [SerializeField] private Character[] _charactersForWinScrenn;
 
+    protected AbstractTeam _enemyTeam;
     protected List<Character> _activeCharacters = new List<Character>();
     protected Character _currentActiveCharacter;
     protected Character _currentCharacterUnderAttack;
@@ -26,9 +26,24 @@ public abstract class AbstractTeam : MonoBehaviour
         }
     }
 
+    public Character[] GetCharactersForWinScreen()
+    {
+        return _charactersForWinScrenn;
+    }
+
     public Character[] GetActiveCharacters()
     {
         return _activeCharacters.ToArray();
+    }
+
+    public Character GetCharacterUnderAttack()
+    {
+        return _currentCharacterUnderAttack;
+    }
+
+    public Character GetCurrentActiveCharacter()
+    {
+        return _currentActiveCharacter;
     }
 
     public ElementType[] GetElementsTypesOfActiveCharacters()
@@ -46,8 +61,11 @@ public abstract class AbstractTeam : MonoBehaviour
         return elementTypes.ToArray();
     }
 
-    public virtual void Initialize()
+    public virtual void Initialize(AbstractTeam enemyTeam)
     {
+        _enemyTeam = enemyTeam;
+        _activeCharacters = new List<Character>();
+
         for (int characterIndex = 0; characterIndex < _charactersInTeam.Length; characterIndex++)
         {
             var characterObj = Instantiate(_charactersInTeam[characterIndex].gameObject);
@@ -58,15 +76,52 @@ public abstract class AbstractTeam : MonoBehaviour
         }
     }
 
-    public void DamageCharacter(int damage)
+    public void Deinitialize()
+    {
+        _enemyTeam = null;
+
+        if (_activeCharacters.Count > 0)
+        {
+            foreach (var character in _activeCharacters)
+            {
+                try
+                {
+                    Destroy(character.gameObject);
+                }
+                catch (Exception ex)
+                { }
+            }
+        }
+    }
+
+    public void SetCharacterUnderAttack()
     {
         _currentCharacterUnderAttack = _activeCharacters.Find(t => t.CurrentState == CharacterState.Alive);
+    }
 
+    public void DamageCharacter(int damage)
+    {
         _currentCharacterUnderAttack.TakeDamage(damage);
 
         if (_currentCharacterUnderAttack.CurrentState == CharacterState.Dead)
         {
             ActivateCharacterDiedUpdate();
+        }
+    }
+
+    public void DamageAllCharacters(int damage)
+    {
+        foreach (var character in _activeCharacters)
+        {
+            if (character.CurrentState == CharacterState.Alive)
+            {
+                character.TakeDamage(damage);
+
+                if (character.CurrentState == CharacterState.Dead)
+                {
+                    ActivateCharacterDiedUpdate();
+                }
+            }
         }
     }
 
@@ -86,6 +141,13 @@ public abstract class AbstractTeam : MonoBehaviour
 
         return ans;
     }
+    public void FlipCharacters()
+    {
+        foreach (var a in _activeCharacters)
+        {
+            a.XFlip();
+        }
+    }
 
     public virtual void DeactivateTeamTurn()
     {
@@ -95,7 +157,7 @@ public abstract class AbstractTeam : MonoBehaviour
     public abstract void TurnByPlayer(Perk perk);
     public abstract void TurnByComputer();
 
-    protected void CheckIfTeamDefeated() 
+    public bool CheckIfTeamDefeated() 
     {
         bool defeated = true;
 
@@ -104,11 +166,12 @@ public abstract class AbstractTeam : MonoBehaviour
             if (character.CurrentState == CharacterState.Alive) defeated = false;
         }
 
-        if (defeated == true) TeamDefeated?.Invoke();
+        return defeated;
     }
+
+    public abstract void MakeDamagePlayer();
 
     protected void ActivateCharacterUpdateUIEvent(Perk[] perks) => ActiveCharacterUpdatedUI?.Invoke(perks);
     protected void ActivateCharacterDiedUpdate() => CharacterDied?.Invoke();
-    protected void ActivateActiveCharacterAttack(int value) => ActiveCharacterAttack?.Invoke(value);
-    protected void ActivateTurnEndedWithoutAttack() => TurnEndedWithoutAttack?.Invoke();
+    protected void ActivateTeamEndedEvent() => TeamEndedTurn?.Invoke();
 }

@@ -1,0 +1,61 @@
+
+character_animation.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+source/pers2/angry
+  rotate: false
+  xy: 2, 947
+  size: 754, 754
+  orig: 754, 754
+  offset: 0, 0
+  index: -1
+source/pers2/ears
+  rotate: false
+  xy: 758, 947
+  size: 754, 754
+  orig: 754, 754
+  offset: 0, 0
+  index: -1
+source/pers2/fangs
+  rotate: false
+  xy: 758, 191
+  size: 754, 754
+  orig: 754, 754
+  offset: 0, 0
+  index: -1
+source/pers2/scared
+  rotate: false
+  xy: 2, 191
+  size: 754, 754
+  orig: 754, 754
+  offset: 0, 0
+  index: -1
+source/pers2/tail
+  rotate: false
+  xy: 2, 2
+  size: 294, 187
+  orig: 754, 754
+  offset: 29, 179
+  index: -1
+
+character_animation2.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+source/pers2/body
+  rotate: true
+  xy: 758, 87
+  size: 669, 645
+  orig: 754, 754
+  offset: 85, 109
+  index: -1
+source/pers2/horns
+  rotate: false
+  xy: 2, 2
+  size: 754, 754
+  orig: 754, 754
+  offset: 0, 0
+  index: -1

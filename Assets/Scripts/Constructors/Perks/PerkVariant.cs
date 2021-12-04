@@ -6,13 +6,16 @@ using UnityEngine;
 public class PerkVariant : ScriptableObject
 {
     public PerkType PerkType;
+    public AttackType AttackType;
 
     public Sprite Icon;
-    public ParticleSystem Particles;
+    public PerkVisualEffect VisualEffect;
+    public PerkDiscription Discription;
 
     public string Name;
     public int ApplyingDamage;
     public int ApplyingDefense;
     public int ApplyingEnergy;
     public int Level;
+    public bool IsTest;
 }
