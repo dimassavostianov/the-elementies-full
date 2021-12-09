@@ -13,15 +13,15 @@ public class BattleUIController : MonoBehaviour
     public ElementType ChoosedType => _battleWheel.ChoosedElement;
 
     [SerializeField] private BattleWheel _battleWheel;
-    [SerializeField] private SkillButton[] _skillButtons;
+    [SerializeField] private AbstractSkillButton[] _skillButtons;
     [SerializeField] private SkillWheelUI _skillWheel;
-    [SerializeField] private GameObject _battleMenu;
-    [SerializeField] private GameObject _allSkillsButton;
+    [SerializeField] private Button _allSkillsButton;
     [SerializeField] private VictoryMenu _victoryMenu;
     [SerializeField] private Button _endTurn;
     [SerializeField] private GameObject _comeSoon;
     [SerializeField] private Button _backToMenu;
     [SerializeField] private MainMenuController _mainMenu;
+    [SerializeField] private AudioSource _buttonAudio;
 
     public void Initialize(BattleStateMachine battleStateMachine)
     {
@@ -32,6 +32,7 @@ public class BattleUIController : MonoBehaviour
         foreach (var button in _skillButtons)
         {
             button.SkillButtonClicked += SetSkillUsed;
+            button.SetAudioSource(_buttonAudio);
             button.ResetButtonInfo();
         }
     }
@@ -50,23 +51,17 @@ public class BattleUIController : MonoBehaviour
     public void EndTurn()
     {
         EndTurnUsed?.Invoke();
-        _endTurn.enabled = false;
-    }
-
-    public void MakeButtonsNonInteractable()
-    {
-        foreach (var button in _skillButtons)
-            button._interactable = false;
+        DisableEndTurnButton();
     }
 
     public void EnableBackToMenu()
     {
-        _backToMenu.enabled = true;
+        _backToMenu.interactable = true;
     }
 
     public void DisableBackToMenu()
     {
-        _backToMenu.enabled = false;
+        _backToMenu.interactable = false;
     }
 
     public void OpenMainMenu()
@@ -76,19 +71,24 @@ public class BattleUIController : MonoBehaviour
     }
 
 
-    public void EnableTurnButton()
+    public void EnableEndTurnButton()
     {
-        _endTurn.enabled = true;
+        _endTurn.interactable = true;
+    }
+
+    public void DisableEndTurnButton()
+    {
+        _endTurn.interactable = false;
     }
 
     public void DisableAllSkillButton()
     {
-        _allSkillsButton.GetComponent<Button>().enabled = false;
+        _allSkillsButton.interactable = false;
     }
 
     public void EnableAllSkillButton()
     {
-        _allSkillsButton.GetComponent<Button>().enabled = true;
+        _allSkillsButton.interactable = true;
     }
 
     public void StartWheelAnimation()
@@ -96,11 +96,11 @@ public class BattleUIController : MonoBehaviour
         _battleWheel.PlayRotationAnimation();
     }
 
-    public void SetSkillButtonsInfo(Perk[] perks)
+    public void SetSkillButtonsInfo(Perk[] perks, bool[] canUsePerk)
     {
         for (int i = 0; i < _skillButtons.Length; i++)
         {
-            _skillButtons[i].SetPerk(perks[i]);
+            _skillButtons[i].SetPerk(perks[i], canUsePerk[i]);
         }
     }
 
@@ -112,20 +112,15 @@ public class BattleUIController : MonoBehaviour
         }
     }
 
+    public void MakeSkillButtonsNonInteractable()
+    {
+        foreach (var button in _skillButtons)
+            button.MakeButtonNonInteractable();
+    }
+
     public void UpdateBattleWheel(ElementType[] leftTeam, ElementType[] rightTeam)
     {
         _battleWheel.UpdateInWheelElements(leftTeam, rightTeam);
-    }
-
-    public void SetSkillsNotAvaliable(int index)
-    {
-        _skillButtons[index].SetUnActive();
-    }
-
-    public void SetSkillsAvaliable()
-    {
-        foreach (var skill in _skillButtons)
-            skill.SetUsable();
     }
 
     private void SetSkillUsed(Perk perk)
@@ -135,16 +130,12 @@ public class BattleUIController : MonoBehaviour
 
     public void ShowLooseScren(Character[] characters)
     {
-        _victoryMenu.gameObject.SetActive(true);
-        _victoryMenu.ShowLoose(characters);
-        _battleMenu.SetActive(false);
+        _mainMenu.ShowLooseScren(characters);
     }
 
     public void ShowWinScreen(Character[] characters)
     {
-        _victoryMenu.gameObject.SetActive(true);
-        _victoryMenu.ShowVictory(characters);
-        _battleMenu.SetActive(false);
+        _mainMenu.ShowWinScreen(characters);
     }
 
     public void ShowSkillsWheelUI()

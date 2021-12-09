@@ -227,11 +227,10 @@ public class LeftTeamTurnState : BattleAbstractState
 
     public override void StateStart()
     {
-
         _rightTeam.SetCharacterUnderAttack();
-        _battleUIController.EnableTurnButton();
+        _battleUIController.EnableEndTurnButton();
         _battleUIController.SkillUsed += _leftTeam.TurnByPlayer;
-        _battleUIController.SkillUsed += (perk) => { _battleUIController.MakeButtonsNonInteractable(); };
+        _battleUIController.SkillUsed += (perk) => { _battleUIController.MakeSkillButtonsNonInteractable(); };
         _battleUIController.SkillUsed += (perk) => { _battleUIController.DisableBackToMenu(); };
         _battleUIController.EndTurnUsed += OnTurnEndPressed;
         _battleUIController.EnableBackToMenu();
@@ -248,20 +247,11 @@ public class LeftTeamTurnState : BattleAbstractState
 
         _battleUIController.EnableAllSkillButton();
 
-
         Character actveChar = _leftTeam.GetCurrentActiveCharacter();
         if (actveChar.gameObject.activeInHierarchy == true)
         {
             int power = actveChar.Power;
             int count = 0;
-            if (power < actveChar.AttackPerk1.ApplyingEnergy)
-            {
-                _battleUIController.SetSkillsNotAvaliable(0);
-            }
-            if (power < actveChar.AttackPerk2.ApplyingEnergy)
-            {
-                _battleUIController.SetSkillsNotAvaliable(1);
-            }
             if (power < actveChar.AttackPerk1.ApplyingEnergy && power < actveChar.AttackPerk2.ApplyingEnergy)
             {
                 _leftTeam.MakeDamagePlayer();
@@ -272,11 +262,11 @@ public class LeftTeamTurnState : BattleAbstractState
     public override void StateStop()
     {
         _leftTeam.TeamEndedTurn -= LeftTeamTurn;
-        _battleUIController.SkillUsed -= (perk) => { _battleUIController.MakeButtonsNonInteractable(); };
+        _battleUIController.DisableEndTurnButton();
+        _battleUIController.SkillUsed -= (perk) => { _battleUIController.MakeSkillButtonsNonInteractable(); };
         _battleUIController.SkillUsed -= (perk) => { _battleUIController.DisableBackToMenu(); };
         _battleUIController.SkillUsed -= _leftTeam.TurnByPlayer;
         _battleUIController.EndTurnUsed -= OnTurnEndPressed;
-        _battleUIController.SetSkillsAvaliable();
         _battleUIController.DisableAllSkillButton();
         _battleUIController.DisableBackToMenu();
         _battleUIController.BackToMenuPressed -= OnBackToMenu;
@@ -386,13 +376,11 @@ public class TurnEndState : BattleAbstractState
 
         if (_leftTeam.CheckIfTeamDefeated() == true)
         {
-            _battleUIController.ShowLooseScren(_rightTeam.GetCharactersForWinScreen());
             _stateMachine.ChangeCurrentState<BattleEndState>();
             return;
         }
         else if (_rightTeam.CheckIfTeamDefeated() == true)
         {
-            _battleUIController.ShowWinScreen(_leftTeam.GetCharactersForWinScreen());
             _stateMachine.ChangeCurrentState<BattleEndState>();
             return;
         }
@@ -441,6 +429,18 @@ public class BattleEndState : BattleAbstractState
 
     public override void StateStart()
     {
+        if (_leftTeam.CheckIfTeamDefeated() == true)
+        {
+            _rightTeam.DestroyCharactersOnDefeat();
+            _leftTeam.DestroyCharactersOnDefeat();
+            _battleUIController.ShowLooseScren(_rightTeam.GetCharactersForWinScreen());
+        }
+        else if (_rightTeam.CheckIfTeamDefeated() == true)
+        {
+            _rightTeam.DestroyCharactersOnDefeat();
+            _leftTeam.DestroyCharactersOnDefeat();
+            _battleUIController.ShowWinScreen(_leftTeam.GetCharactersForWinScreen());
+        }
     }
 
     public override void StateStop()

@@ -74,16 +74,6 @@ public class SkillButton : MonoBehaviour, IPointerClickHandler
         SetTest();
     }
 
-    public void ResetButtonInfoInAllElementsUI()
-    {
-        _energyText.text = "0";
-        _damageText.text = "0";
-        _defenseText.text = "0";
-        _nameText.text = "";
-
-        _perkIcon.SetNativeSize();
-    }
-
     public void SetUnActive()
     {
         _skillUnavailable.SetUnavailable();
@@ -98,12 +88,6 @@ public class SkillButton : MonoBehaviour, IPointerClickHandler
     {
         _testSkill.SetAsTest();
         _interactable = false;
-    }
-
-    public void Setinteractable()
-    {
-        _interactable = true;
-        _usedInThisTurn = false;
     }
 
     private void SetActive()

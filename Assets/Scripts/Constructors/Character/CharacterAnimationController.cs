@@ -41,9 +41,7 @@ public class CharacterAnimationController : MonoBehaviour
         float speedOnFirstHalf = distanceToEnemy / halfAnimationDuration;
         float traveledDistance = 0f;
 
-        StartCoroutine(TemporalCostil());
-
-        while (traveledDistance < distanceToEnemy - 1.5f)
+        while (traveledDistance < distanceToEnemy - 2f)
         {
             transform.position = Vector3.MoveTowards(transform.position, enemyPosition, speedOnFirstHalf * Time.deltaTime);
             traveledDistance += speedOnFirstHalf * Time.deltaTime;
@@ -51,6 +49,7 @@ public class CharacterAnimationController : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        StaticInfo.HalfMeleeAttackComplete = true;
         traveledDistance = 0f;
         Vector3 directionToStartPos = startPosition - enemyPosition;
         float distanceBack = Vector3.Magnitude(directionToStartPos);
@@ -65,13 +64,6 @@ public class CharacterAnimationController : MonoBehaviour
         }
 
         StartRelaxAnimation();
-    }
-
-    private IEnumerator TemporalCostil()
-    {
-        yield return new WaitForSeconds(0.1f);
-
-        StaticInfo.HalfMeleeAttackComplete = true;
     }
 
     public void StartCastAnimation()

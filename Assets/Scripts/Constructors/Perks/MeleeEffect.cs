@@ -6,7 +6,8 @@ public class MeleeEffect : PerkVisualEffect
     public override void StartEffect(Vector3 startPosition, Vector3 enemyPosition)
     {
         var effectObj = Instantiate(_effectPrefab);
-        effectObj.transform.position = new Vector3(enemyPosition.x, enemyPosition.y, 0);
+        effectObj.transform.position = new Vector3(enemyPosition.x + _startPositionForDistanceAttack.x, 
+            enemyPosition.y + _startPositionForDistanceAttack.y, 0);
         StartCoroutine(EndVisualEffectAfterDuration(effectObj));
     }
 

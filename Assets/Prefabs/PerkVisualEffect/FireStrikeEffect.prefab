@@ -45,5 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _effectPrefab: {fileID: 9089811337789065921, guid: 6b5d88ef105ea504c9ae879a9a1360d2, type: 3}
   _startPositionForDistanceAttack: {x: 0, y: 0}
-  _minDistanceToAproach: 0
   _duration: 1.5
+  _distanceOffset: 0
+  _goBackwards: 0

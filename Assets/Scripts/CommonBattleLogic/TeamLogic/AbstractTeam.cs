@@ -5,7 +5,7 @@ using System;
 
 public abstract class AbstractTeam : MonoBehaviour
 {
-    public event Action<Perk[]> ActiveCharacterUpdatedUI;
+    public event Action<Perk[], bool[]> ActiveCharacterUpdatedUI;
     public event Action CharacterDied;
     public event Action TeamEndedTurn;
 
@@ -163,15 +163,24 @@ public abstract class AbstractTeam : MonoBehaviour
 
         foreach (var character in _activeCharacters)
         {
-            if (character.CurrentState == CharacterState.Alive) defeated = false;
+            if (character.CurrentState == CharacterState.Alive)
+            {
+                defeated = false;
+            }
         }
 
         return defeated;
     }
 
+    public void DestroyCharactersOnDefeat()
+    {
+        foreach (var character in _activeCharacters)
+            Destroy(character.gameObject);
+    }
+
     public abstract void MakeDamagePlayer();
 
-    protected void ActivateCharacterUpdateUIEvent(Perk[] perks) => ActiveCharacterUpdatedUI?.Invoke(perks);
+    protected void ActivateCharacterUpdateUIEvent(Perk[] perks, bool[] canUsePerk) => ActiveCharacterUpdatedUI?.Invoke(perks, canUsePerk);
     protected void ActivateCharacterDiedUpdate() => CharacterDied?.Invoke();
     protected void ActivateTeamEndedEvent() => TeamEndedTurn?.Invoke();
 }

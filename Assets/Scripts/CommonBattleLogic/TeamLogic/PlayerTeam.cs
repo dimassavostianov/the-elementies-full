@@ -15,7 +15,16 @@ public class PlayerTeam : AbstractTeam
             _currentActiveCharacter.DefensePerk,
             _currentActiveCharacter.PassivePerk,
             };
-            ActivateCharacterUpdateUIEvent(characterPerks);
+
+            bool[] canCharacterUsePerks = new bool[4]
+            {
+            characterPerks[0].ApplyingEnergy <= _currentActiveCharacter.Power,
+            characterPerks[1].ApplyingEnergy <= _currentActiveCharacter.Power,
+            characterPerks[2].ApplyingEnergy <= _currentActiveCharacter.Power,
+            characterPerks[3].ApplyingEnergy <= _currentActiveCharacter.Power,
+            };
+
+            ActivateCharacterUpdateUIEvent(characterPerks, canCharacterUsePerks);
         }
 
         return ans;

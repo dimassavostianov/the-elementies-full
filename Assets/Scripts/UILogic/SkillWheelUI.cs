@@ -8,11 +8,11 @@ public class SkillWheelUI : MonoBehaviour
 {
     public PerkVariant PerkVariant;
 
-    [SerializeField] private SkillButton _centralSkill;
+    [SerializeField] private AbstractSkillButton _centralSkill;
     [SerializeField] private GameObject _additionalInfo;
     [SerializeField] private InWheelSkillButton[] _skillButtons;
-    [SerializeField] private SkillButton[] _skillsInUse;
-    [SerializeField] private SkillButton[] _skillsNoInUse;
+    [SerializeField] private AbstractSkillButton[] _skillsInUse;
+    [SerializeField] private AbstractSkillButton[] _skillsNoInUse;
     [SerializeField] private Image _background;
     [SerializeField] private Sprite _blueBackframe;
     [SerializeField] private Sprite _greenBackframe;
@@ -22,10 +22,13 @@ public class SkillWheelUI : MonoBehaviour
     [SerializeField] private Image _visualDescription;
     [SerializeField] private TextMeshProUGUI _descriptionText;
     [SerializeField] private TextMeshProUGUI _perkTitle;
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private float _openAnimationSpeed;
     [SerializeField] private float _wheelRotationSpeed;
-    
+    [SerializeField] private float _startScale;
+
     private const float _angleOffset = 45f;
+    private int _currentIndex;
 
     private void OnEnable()
     {
@@ -60,8 +63,11 @@ public class SkillWheelUI : MonoBehaviour
             }
 
             _skillButtons[i].ButtonClicked += OnSkillButtonClicked;
+            _skillButtons[i].SetAudioSource(_audioSource);
             _skillButtons[i].Index = i;
         }
+
+        _currentIndex = 0;
     }
 
     public void UpdateDescriptionInfo(Perk perk)
@@ -82,7 +88,7 @@ public class SkillWheelUI : MonoBehaviour
         float xScale = gameObject.transform.localScale.x;
         float yScale = gameObject.transform.localScale.y;
 
-        while (xScale < 1 && yScale < 1)
+        while (xScale < _startScale && yScale < _startScale)
         {
             xScale += Time.deltaTime * _openAnimationSpeed;
             yScale += Time.deltaTime * _openAnimationSpeed;
@@ -113,6 +119,10 @@ public class SkillWheelUI : MonoBehaviour
 
     private void OnSkillButtonClicked(int index)
     {
+        if (index == _currentIndex) return;
+
+        _skillButtons[_currentIndex].ResetBackframe();
+        _currentIndex = index;
         StartCoroutine(RotationAnimation(index));
     }
 
@@ -131,8 +141,9 @@ public class SkillWheelUI : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        _centralSkill.SetPerk(_skillButtons[index].SkillButton.GetPerk());
-        UpdateDescriptionInfo(_skillButtons[index].SkillButton.GetPerk());
+        _centralSkill.SetPerk(_skillButtons[index].GetPerk());
+        _skillButtons[_currentIndex].SetBackframe(_blueBackframe);
+        UpdateDescriptionInfo(_skillButtons[index].GetPerk());
     }
 
     private float CalculateFastestRotationDegrees(int index)

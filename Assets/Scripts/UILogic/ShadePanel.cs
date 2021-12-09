@@ -9,6 +9,8 @@ public class ShadePanel : MonoBehaviour
     [SerializeField] private Image _shadingPlane;
     [SerializeField] private float _maxAlpha;
 
+    protected bool _shadeComplete;
+
     private Color _panelColor;
     private float _alpha;
 
@@ -16,6 +18,7 @@ public class ShadePanel : MonoBehaviour
     {
         _panelColor = _shadingPlane.color;
         _alpha = 0;
+        _shadeComplete = false;
         StartCoroutine(Anim());
     }
 
@@ -36,6 +39,8 @@ public class ShadePanel : MonoBehaviour
 
             yield return new WaitForEndOfFrame();
         }
+
+        _shadeComplete = true;
     }
 
     private IEnumerator BackAnim()

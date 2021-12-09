@@ -6,7 +6,7 @@ using TMPro;
 
 public class StatsMenuUIController : MonoBehaviour
 {
-    [SerializeField] private SkillButton[] _skillButtons;
+    [SerializeField] private AbstractSkillButton[] _skillButtons;
     [SerializeField] private TextMeshProUGUI _healthText;
     [SerializeField] private TextMeshProUGUI _attackText;
     [SerializeField] private TextMeshProUGUI _defenseText;
