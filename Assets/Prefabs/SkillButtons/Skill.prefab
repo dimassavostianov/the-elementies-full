@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundPrefab: {fileID: -6430150484472444040, guid: ae3b825757d95cf48931cf1624d29c04, type: 3}
-  _clip: {fileID: 8300000, guid: d4a1cd8b4860b944f8a7b3a31f0a1ee6, type: 3}
+  _clip: {fileID: 8300000, guid: 621dcbb19abd5b24a8046ad17f185aa8, type: 3}
   _skillButton: {fileID: 5414489503783794410}
 --- !u!1 &4475637126077025253
 GameObject:

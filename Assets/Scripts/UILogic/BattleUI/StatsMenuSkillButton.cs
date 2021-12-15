@@ -11,6 +11,7 @@ public class StatsMenuSkillButton : AbstractSkillButton
         if (_isInteractable == true)
         {
             InvokeClickedEvent();
+            _audio.Play(0);
         }
     }
 

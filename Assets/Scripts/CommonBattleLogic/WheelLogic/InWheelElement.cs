@@ -7,6 +7,8 @@ using System;
 
 public class InWheelElement : MonoBehaviour
 {
+    public bool IsOffscreen => _offScreenNotifier.CheckIfOffScreen();
+
     [SerializeField] private Image _image;
     [SerializeField] private ObjectOffScreenNotifier _offScreenNotifier;
     [SerializeField] private List<ElementType> _possibleElementsLeftTeam;
@@ -22,26 +24,12 @@ public class InWheelElement : MonoBehaviour
         _elementsDictionary.InitializeDictionary();
     }
 
-    public void InitializeWheelElement(int indexForLeft, int indexForRight, out int indexForLeftQueue, out int indexForRightQueue)
-    {
-        ChooseElementFromPossiblesOnEnable(indexForLeft, indexForRight, out indexForLeftQueue, out indexForRightQueue);
-    }
-
     public void SetCurrentTeam(Teams team)
     {
         _currentTeam = team;
 
         if (_currentTeam == Teams.Right) _teamIndicator.SetActive(true);
         else _teamIndicator.SetActive(false);
-    }
-
-    public void SetPossibleElements(ElementType[] leftTeam, ElementType[] rightTeam)
-    {
-        _possibleElementsLeftTeam = new List<ElementType>();
-        _possibleElementsRightTeam = new List<ElementType>();
-
-        _possibleElementsLeftTeam.AddRange(leftTeam);
-        _possibleElementsRightTeam.AddRange(rightTeam);
     }
 
     public ElementType GetCurrentElementType()
@@ -80,87 +68,14 @@ public class InWheelElement : MonoBehaviour
         _image.color = unshadedColor;
     }
 
-    public void ChooseElementFromPossibles(int indexForLeft, int indexForRight, out int indexForLeftQueue, out int indexForRightQueue)
+    public void SetElement(ElementType elementType)
     {
-        indexForRightQueue = -1;
-        indexForLeftQueue = -1;
-
-        if (_offScreenNotifier.CheckIfOffScreen() == true)
-        {
-            Sprite sprite;
-
-            if (_currentTeam == Teams.Right)
-            {
-                try
-                {
-                    _currentElementType = _possibleElementsRightTeam[indexForRight];
-                    indexForRightQueue = indexForRight;
-                }
-                catch (Exception ex)
-                {
-                    _currentElementType = _possibleElementsRightTeam[0];
-                    indexForRightQueue = indexForRight;
-                }
-
-                sprite = _elementsDictionary.GetElementIconByType(_currentElementType);
-            }
-            else
-            {
-                try
-                {
-                    _currentElementType = _possibleElementsLeftTeam[indexForLeft];
-                    indexForLeftQueue = indexForLeft;
-                }
-                catch (Exception ex)
-                {
-                    _currentElementType = _possibleElementsLeftTeam[0];
-                    indexForLeftQueue = indexForLeft;
-                }
-
-                sprite = _elementsDictionary.GetElementIconByType(_currentElementType);
-            }
-
-            _image.sprite = sprite;
-            SetAsUnused();
-        }
-    }
-
-    private bool CheckIfNeedChangeElement(Teams team)
-    {
-        if (team == Teams.Left)
-        {
-            bool exist = _possibleElementsLeftTeam.Any(t => t == _currentElementType);
-            return !exist;
-        }
-        else
-        {
-            bool exist = _possibleElementsRightTeam.Any(t => t == _currentElementType);
-            return !exist;
-        }
-    }
-
-    private void ChooseElementFromPossiblesOnEnable(int indexForLeft, int indexForRight, out int indexForLeftQueue, out int indexForRightQueue)
-    {
-        indexForRightQueue = -1;
-        indexForLeftQueue = -1;
-
         Sprite sprite;
 
-        if (_currentTeam == Teams.Right)
-        {
-            _currentElementType = _possibleElementsRightTeam[indexForRight];
-            indexForLeftQueue = indexForLeft;
-
-            sprite = _elementsDictionary.GetElementIconByType(_currentElementType);
-        }
-        else
-        {
-            _currentElementType = _possibleElementsLeftTeam[indexForLeft];
-            indexForRightQueue = indexForRight;
-
-            sprite = _elementsDictionary.GetElementIconByType(_currentElementType);
-        }
+        sprite = _elementsDictionary.GetElementIconByType(elementType);
 
         _image.sprite = sprite;
+        _currentElementType = elementType;
+        SetAsUnused();
     }
 }

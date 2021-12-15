@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c71922865a9b0a4b881202c90489b11, type: 3}
+  m_Name: StrongBite
+  m_EditorClassIdentifier: 
+  PerkType: 0
+  AttackType: 0
+  DamageType: 0
+  Icon: {fileID: -3270749691070897954, guid: aea1df50a78242f4e8d2118c1be70f43, type: 3}
+  VisualEffect: {fileID: -5448227933137097057, guid: 3140c8348aa57944b8ba2279041716d3, type: 3}
+  Discription: {fileID: 11400000, guid: 572a0b917e2cb1b4a94bb8218b4af4a3, type: 2}
+  Name: Strong Bite
+  ApplyingDamage: 70
+  ApplyingDefense: 0
+  ApplyingEnergy: 50
+  Level: 0
+  Duration: 0
+  IsTest: 0

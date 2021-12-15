@@ -7,6 +7,7 @@ public class PerkVariant : ScriptableObject
 {
     public PerkType PerkType;
     public AttackType AttackType;
+    public DamageType DamageType;
 
     public Sprite Icon;
     public PerkVisualEffect VisualEffect;
@@ -17,5 +18,6 @@ public class PerkVariant : ScriptableObject
     public int ApplyingDefense;
     public int ApplyingEnergy;
     public int Level;
+    public int Duration;
     public bool IsTest;
 }

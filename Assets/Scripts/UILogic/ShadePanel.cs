@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ShadePanel : MonoBehaviour
 {
-    [SerializeField, Range(0, 1)] private float _shadingSpeed;
+    [SerializeField, Range(0, 2)] private float _shadingSpeed;
     [SerializeField] private Image _shadingPlane;
     [SerializeField] private float _maxAlpha;
 

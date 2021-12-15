@@ -9,6 +9,7 @@ public static class PerkFactory
         var perk = new Perk(
             perkVariant.PerkType,
             perkVariant.AttackType,
+            perkVariant.DamageType,
             perkVariant.Icon,
             perkVariant.VisualEffect,
             perkVariant.Discription,
@@ -17,6 +18,7 @@ public static class PerkFactory
             perkVariant.ApplyingDefense,
             perkVariant.ApplyingEnergy,
             perkVariant.Level,
+            perkVariant.Duration,
             perkVariant.IsTest);
 
         return perk;

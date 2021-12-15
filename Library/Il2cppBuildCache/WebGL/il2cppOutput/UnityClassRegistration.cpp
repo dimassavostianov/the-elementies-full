@@ -48,12 +48,6 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_UI();
 	RegisterModule_UI();
 
-	void RegisterModule_UIElementsNative();
-	RegisterModule_UIElementsNative();
-
-	void RegisterModule_UIElements();
-	RegisterModule_UIElements();
-
 	void RegisterModule_VR();
 	RegisterModule_VR();
 
@@ -73,6 +67,8 @@ void InvokeRegisterStaticallyLinkedModuleClasses()
 	// Do nothing (we're in stripping mode)
 }
 
+namespace ObjectProduceTestTypes { class Derived; } 
+namespace ObjectProduceTestTypes { class SubDerived; } 
 class EditorExtension; template <> void RegisterUnityClass<EditorExtension>(const char*);
 namespace Unity { class Component; } template <> void RegisterUnityClass<Unity::Component>(const char*);
 class Behaviour; template <> void RegisterUnityClass<Behaviour>(const char*);
@@ -114,6 +110,7 @@ class GridLayout;
 class Grid; 
 class Tilemap; 
 class Halo; 
+class HaloLayer; 
 class IConstraint; 
 class AimConstraint; 
 class LookAtConstraint; 
@@ -162,6 +159,7 @@ class MeshCollider;
 class SphereCollider; 
 class TerrainCollider; 
 class WheelCollider; 
+class FakeComponent; 
 namespace Unity { class Joint; } 
 namespace Unity { class CharacterJoint; } 
 namespace Unity { class ConfigurableJoint; } 
@@ -176,6 +174,7 @@ class ParticleSystem; template <> void RegisterUnityClass<ParticleSystem>(const 
 class Renderer; template <> void RegisterUnityClass<Renderer>(const char*);
 class BillboardRenderer; 
 class LineRenderer; 
+class RendererFake; 
 class MeshRenderer; template <> void RegisterUnityClass<MeshRenderer>(const char*);
 class ParticleSystemRenderer; template <> void RegisterUnityClass<ParticleSystemRenderer>(const char*);
 class SkinnedMeshRenderer; 
@@ -253,6 +252,7 @@ class VideoClip;
 class VisualEffectObject; 
 class VisualEffectAsset; 
 class VisualEffectSubgraph; 
+class EmptyObject; 
 class GameManager; template <> void RegisterUnityClass<GameManager>(const char*);
 class GlobalGameManager; template <> void RegisterUnityClass<GlobalGameManager>(const char*);
 class AudioManager; template <> void RegisterUnityClass<AudioManager>(const char*);
@@ -268,7 +268,7 @@ class PlayerSettings; template <> void RegisterUnityClass<PlayerSettings>(const 
 class QualitySettings; template <> void RegisterUnityClass<QualitySettings>(const char*);
 class ResourceManager; template <> void RegisterUnityClass<ResourceManager>(const char*);
 class RuntimeInitializeOnLoadManager; template <> void RegisterUnityClass<RuntimeInitializeOnLoadManager>(const char*);
-class ShaderNameRegistry; template <> void RegisterUnityClass<ShaderNameRegistry>(const char*);
+class ScriptMapper; template <> void RegisterUnityClass<ScriptMapper>(const char*);
 class StreamingManager; 
 class TagManager; template <> void RegisterUnityClass<TagManager>(const char*);
 class TimeManager; template <> void RegisterUnityClass<TimeManager>(const char*);
@@ -279,6 +279,18 @@ class LightmapSettings; template <> void RegisterUnityClass<LightmapSettings>(co
 class NavMeshSettings; 
 class OcclusionCullingSettings; 
 class RenderSettings; template <> void RegisterUnityClass<RenderSettings>(const char*);
+class NativeObjectType; 
+class PropertyModificationsTargetTestObject; 
+class SerializableManagedHost; 
+class SerializableManagedRefTestClass; 
+namespace ObjectProduceTestTypes { class SiblingDerived; } 
+class TestObjectVectorPairStringBool; 
+class TestObjectWithSerializedAnimationCurve; 
+class TestObjectWithSerializedArray; 
+class TestObjectWithSerializedMapStringBool; 
+class TestObjectWithSerializedMapStringNonAlignedStruct; 
+class TestObjectWithSpecialLayoutOne; 
+class TestObjectWithSpecialLayoutTwo; 
 
 void RegisterAllClasses()
 {
@@ -385,10 +397,10 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<ResourceManager>("Core");
 	//49. RuntimeInitializeOnLoadManager
 	RegisterUnityClass<RuntimeInitializeOnLoadManager>("Core");
-	//50. Shader
+	//50. ScriptMapper
+	RegisterUnityClass<ScriptMapper>("Core");
+	//51. Shader
 	RegisterUnityClass<Shader>("Core");
-	//51. ShaderNameRegistry
-	RegisterUnityClass<ShaderNameRegistry>("Core");
 	//52. Skybox
 	RegisterUnityClass<Skybox>("Core");
 	//53. Sprite

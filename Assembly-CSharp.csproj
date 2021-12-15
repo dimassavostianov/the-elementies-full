@@ -56,10 +56,15 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CharacterStatsMenuAnimationController.cs" />
     <Compile Include="Assets\Scripts\Constructors\Perks\DistanceEffect.cs" />
     <Compile Include="Assets\Scripts\Constructors\Character\CharacterConstructor.cs" />
     <Compile Include="Assets\Scripts\UILogic\StatsMenuUI\SkillsDescriptionMenu.cs" />
+    <Compile Include="Assets\Scripts\SkillButtonOnPointingSound.cs" />
+    <Compile Include="Assets\Scripts\Constructors\Perks\DefensePerkEffect.cs" />
+    <Compile Include="Assets\Scripts\UILogic\BattleUI\SkillButtonInBattle.cs" />
     <Compile Include="Assets\Scripts\VictoryMenu.cs" />
+    <Compile Include="Assets\Scripts\SkillButtonColorTint.cs" />
     <Compile Include="Assets\Scripts\UILogic\SkillWheelUI.cs" />
     <Compile Include="Assets\Scripts\Constructors\Perks\PerkVariant.cs" />
     <Compile Include="Assets\Scripts\CommonBattleLogic\WheelLogic\Wheel.cs" />
@@ -70,31 +75,42 @@
     <Compile Include="Assets\Scripts\ObjectSelfDestroyer.cs" />
     <Compile Include="Assets\Scripts\CommonBattleLogic\TeamLogic\EnemyPlayerTeam.cs" />
     <Compile Include="Assets\BackMusic.cs" />
+    <Compile Include="Assets\Scripts\ButtonOnPointingSound.cs" />
+    <Compile Include="Assets\Scripts\AnimationForDescription.cs" />
     <Compile Include="Assets\Scripts\CommonBattleLogic\TeamLogic\ComputerTeam.cs" />
+    <Compile Include="Assets\Scripts\Constructors\Perks\PerkSystem.cs" />
     <Compile Include="Assets\Scripts\PerkDiscription.cs" />
     <Compile Include="Assets\Scripts\UILogic\ShadePanel.cs" />
     <Compile Include="Assets\Scripts\UILogic\BattleUI\SkillButton.cs" />
     <Compile Include="Assets\Scripts\UILogic\CharacterHPStaUI.cs" />
+    <Compile Include="Assets\Scripts\CloudsSpawner.cs" />
     <Compile Include="Assets\Scripts\UILogic\BattleUI\BattleUIController.cs" />
     <Compile Include="Assets\Scripts\UILogic\StatsMenuUI\StatsMenuCharacterUI.cs" />
     <Compile Include="Assets\Scripts\Constructors\Character\ElementType.cs" />
     <Compile Include="Assets\Scripts\Constructors\Character\CharacterAnimationController.cs" />
+    <Compile Include="Assets\Scripts\Constructors\Perks\PassivePerkEffect.cs" />
+    <Compile Include="Assets\Scripts\HpBarNumbersAnimationHandler.cs" />
     <Compile Include="Assets\Scripts\CommonBattleLogic\TeamLogic\AbstractTeam.cs" />
     <Compile Include="Assets\Scripts\CommonBattleLogic\TeamLogic\PlayerTeam.cs" />
     <Compile Include="Assets\Scripts\StaticInfo.cs" />
     <Compile Include="Assets\Scripts\CommonBattleLogic\WheelLogic\InWheelElement.cs" />
+    <Compile Include="Assets\Scripts\Cloud.cs" />
     <Compile Include="Assets\Scripts\SkillUnavailable.cs" />
     <Compile Include="Assets\Scripts\UILogic\InWheelSkillButton.cs" />
+    <Compile Include="Assets\Scripts\UILogic\BattleUI\StatsMenuSkillButton.cs" />
+    <Compile Include="Assets\Scripts\DarknessCallSpikes.cs" />
     <Compile Include="Assets\Scripts\Constructors\Perks\Perk.cs" />
     <Compile Include="Assets\Scripts\Constructors\Perks\StationaryDistanceAttack.cs" />
     <Compile Include="Assets\Scripts\CommonBattleLogic\BattleStateMachine.cs" />
     <Compile Include="Assets\Scripts\MainMenu\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\Constructors\Perks\DistanceEffectSelfPositioning.cs" />
     <Compile Include="Assets\Scripts\ObjectOffScreenNotifier.cs" />
+    <Compile Include="Assets\Scripts\UIButtonOnPointingSound.cs" />
     <Compile Include="Assets\Scripts\VFXObjectLogic.cs" />
     <Compile Include="Assets\Scripts\Constructors\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Constructors\Character\CharacterRarity.cs" />
     <Compile Include="Assets\Test.cs" />
+    <Compile Include="Assets\Scripts\UILogic\BattleUI\AbstractSkillButton.cs" />
     <Compile Include="Assets\Scripts\UILogic\SceneTransitionShadePanel.cs" />
     <Compile Include="Assets\ComingSoon.cs" />
     <Compile Include="Assets\Scripts\UILogic\StatsMenuUI\StatsMenuUIController.cs" />
@@ -102,21 +118,14 @@
     <Compile Include="Assets\Scripts\Constructors\Perks\PerkFactory.cs" />
     <Compile Include="Assets\Scripts\Constructors\Perks\PerkVisualEffect.cs" />
     <Compile Include="Assets\Scripts\Constructors\Character\CharacterVariant.cs" />
-    <Compile Include="Assets\Scripts\UILogic\BattleUI\SkillButtonInBattle.cs" />
-    <Compile Include="Assets\Scripts\UILogic\BattleUI\AbstractSkillButton.cs" />
-    <Compile Include="Assets\Scripts\UILogic\BattleUI\StatsMenuSkillButton.cs" />
-    <Compile Include="Assets\Scripts\SkillButtonColorTint.cs" />
-    <Compile Include="Assets\Scripts\ButtonOnPointingSound.cs" />
-    <Compile Include="Assets\Scripts\UIButtonOnPointingSound.cs" />
-    <Compile Include="Assets\Scripts\SkillButtonOnPointingSound.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Animations\Characters\Air\Pers1.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Spine\version.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\Animations\character_animation\json2\Dark\character_animation.atlas 2.txt" />
+    <None Include="Assets\Animations\Characters\Dark\Pers1.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\Animations\character_animation\json2\character_animation.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\CustomFonts\Afronickfont\readme.txt" />
@@ -130,12 +139,11 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Animations\Characters\Fire\Pers1.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\Animations\Character\demon.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\Animations\character_animation\json2\Air\character_animation.atlas 1.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
@@ -860,6 +868,10 @@
     <ProjectReference Include="spine-unity-editor.csproj">
       <Project>{0AF1E42F-FC97-1FE6-5D4D-3E0EC093E8C2}</Project>
       <Name>spine-unity-editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-csharp.csproj">
+      <Project>{35BD3B6B-4F52-3082-2445-4D37E5B6901F}</Project>
+      <Name>spine-csharp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

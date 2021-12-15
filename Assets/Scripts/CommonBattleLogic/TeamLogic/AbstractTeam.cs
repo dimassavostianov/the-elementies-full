@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Spine.Unity;
 
 public abstract class AbstractTeam : MonoBehaviour
 {
@@ -11,12 +12,12 @@ public abstract class AbstractTeam : MonoBehaviour
 
     [SerializeField] private Transform[] _positionsForTeam;
     [SerializeField] private Character[] _charactersInTeam = new Character[3];
-    [SerializeField] private Character[] _charactersForWinScrenn;
 
     protected AbstractTeam _enemyTeam;
     protected List<Character> _activeCharacters = new List<Character>();
     protected Character _currentActiveCharacter;
     protected Character _currentCharacterUnderAttack;
+    protected PerkSystem _perkSysytem;
 
     public void SetCharactersInTeam(Character[] characters)
     {
@@ -28,7 +29,7 @@ public abstract class AbstractTeam : MonoBehaviour
 
     public Character[] GetCharactersForWinScreen()
     {
-        return _charactersForWinScrenn;
+        return _charactersInTeam;
     }
 
     public Character[] GetActiveCharacters()
@@ -65,20 +66,24 @@ public abstract class AbstractTeam : MonoBehaviour
     {
         _enemyTeam = enemyTeam;
         _activeCharacters = new List<Character>();
+        _perkSysytem = new PerkSystem();
 
         for (int characterIndex = 0; characterIndex < _charactersInTeam.Length; characterIndex++)
         {
             var characterObj = Instantiate(_charactersInTeam[characterIndex].gameObject);
             Character charOnScene = characterObj.GetComponent<Character>();
+            characterObj.GetComponent<MeshRenderer>().sortingOrder = characterIndex + 1;
             _activeCharacters.Add(charOnScene);
             Vector2 posForCharacter = _positionsForTeam[characterIndex].position;
             characterObj.transform.position = new Vector3(posForCharacter.x, posForCharacter.y, 0);
+            charOnScene.InitForBattle();
         }
     }
 
     public void Deinitialize()
     {
         _enemyTeam = null;
+        _perkSysytem.DestroyAllEffects();
 
         if (_activeCharacters.Count > 0)
         {
@@ -99,9 +104,27 @@ public abstract class AbstractTeam : MonoBehaviour
         _currentCharacterUnderAttack = _activeCharacters.Find(t => t.CurrentState == CharacterState.Alive);
     }
 
-    public void DamageCharacter(int damage)
+    protected void Attack()
     {
-        _currentCharacterUnderAttack.TakeDamage(damage);
+        if (_currentActiveCharacter.ActivePassivePerk != null && _currentActiveCharacter.ActivePassivePerk.ApplyingDefense == 0)
+        {
+            _perkSysytem.UsePassivePerk(this);
+        }
+    }
+
+    public void DamageCharacter(int damage, string perkName)
+    {
+        _currentCharacterUnderAttack.TakeDamage(damage, perkName);
+
+        if (_currentCharacterUnderAttack.ActiveDefensePerk != null)
+        {
+            _perkSysytem.UseDefensePerk(_currentCharacterUnderAttack, _enemyTeam);
+        }
+
+        if (_currentCharacterUnderAttack.ActivePassivePerk != null && _currentCharacterUnderAttack.ActivePassivePerk.ApplyingDamage == 0)
+        {
+            _perkSysytem.UsePassivePerk(this);
+        }
 
         if (_currentCharacterUnderAttack.CurrentState == CharacterState.Dead)
         {
@@ -109,13 +132,28 @@ public abstract class AbstractTeam : MonoBehaviour
         }
     }
 
-    public void DamageAllCharacters(int damage)
+    public void CounterDamage(int damage, string perkName)
+    {
+        _currentActiveCharacter.TakeDamage(damage, perkName);
+
+        if (_currentActiveCharacter.ActiveDefensePerk != null)
+        {
+            _perkSysytem.UseDefensePerk(_currentActiveCharacter, _enemyTeam);
+        }
+
+        if (_currentActiveCharacter.CurrentState == CharacterState.Dead)
+        {
+            ActivateCharacterDiedUpdate();
+        }
+    }
+
+    public void DamageAllCharacters(int damage, string perkName)
     {
         foreach (var character in _activeCharacters)
         {
             if (character.CurrentState == CharacterState.Alive)
             {
-                character.TakeDamage(damage);
+                character.TakeDamage(damage, perkName);
 
                 if (character.CurrentState == CharacterState.Dead)
                 {
@@ -131,7 +169,6 @@ public abstract class AbstractTeam : MonoBehaviour
         _currentActiveCharacter = _activeCharacters.Find(t => t.ElementType == characterType);
         if (_currentActiveCharacter.CurrentState == CharacterState.Alive)
         {
-            _currentActiveCharacter.SetAsChoosed();
             ans = true;
         }
         else if (_currentActiveCharacter.CurrentState == CharacterState.Dead)
@@ -147,11 +184,6 @@ public abstract class AbstractTeam : MonoBehaviour
         {
             a.XFlip();
         }
-    }
-
-    public virtual void DeactivateTeamTurn()
-    {
-        _currentActiveCharacter.ResetActiveAttackPerks();
     }
 
     public abstract void TurnByPlayer(Perk perk);

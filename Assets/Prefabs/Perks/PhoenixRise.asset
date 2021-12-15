@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c71922865a9b0a4b881202c90489b11, type: 3}
+  m_Name: PhoenixRise
+  m_EditorClassIdentifier: 
+  PerkType: 2
+  AttackType: 0
+  DamageType: 0
+  Icon: {fileID: -3314920299808077588, guid: 7206a7adff5abb2488b554d59fdcbd7f, type: 3}
+  VisualEffect: {fileID: -5505004268422160106, guid: a67b1b9ecd5fa894e8ea4dc2d27e5d94, type: 3}
+  Discription: {fileID: 11400000, guid: 24f271ad414c73949a47cc7f191f6afc, type: 2}
+  Name: Phoenix Rise
+  ApplyingDamage: 2
+  ApplyingDefense: 0
+  ApplyingEnergy: 20
+  Level: 0
+  Duration: 1
+  IsTest: 0

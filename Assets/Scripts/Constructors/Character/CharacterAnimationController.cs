@@ -2,6 +2,7 @@
 using Spine.Unity;
 using System.Collections;
 using Spine;
+using System.Collections.Generic;
 
 public class CharacterAnimationController : MonoBehaviour
 {
@@ -9,10 +10,15 @@ public class CharacterAnimationController : MonoBehaviour
     [SerializeField] private AnimationReferenceAsset _meleeAttack;
     [SerializeField] private AnimationReferenceAsset _cast;
     [SerializeField] private AnimationReferenceAsset _takeDamage;
+    [SerializeField] private AnimationReferenceAsset _takeDamageFromBlade;
+    [SerializeField] private AnimationReferenceAsset _takeDamageSpike;
+    [SerializeField] private AnimationReferenceAsset _takeDamageTornado;
     [SerializeField] private AnimationReferenceAsset _death;
-    [SerializeField] private AnimationReferenceAsset _defence;
     [SerializeField] private AnimationReferenceAsset _relax;
+    [SerializeField] private AnimationReferenceAsset _winPose;
     [SerializeField] private float minDistanceForMeleeAtack;
+
+    private Dictionary<string, AnimationReferenceAsset> _attackAnimationPairs;
 
     public void MakeXFlip()
     {
@@ -31,17 +37,25 @@ public class CharacterAnimationController : MonoBehaviour
         StartCoroutine(MeleeAttackAnim(enemyPosition));
     }
 
+    private IEnumerator MeleeAttack()
+    {
+        yield return new WaitForSeconds(0.35f);
+        StaticInfo.HalfMeleeAttackComplete = true;
+        yield return new WaitForSeconds(1.167f - 0.35f);
+        StartRelaxAnimation();
+    }
+
     private IEnumerator MeleeAttackAnim(Vector3 enemyPosition)
     {
-        float halfAnimationDuration = 0.35f;
-        float secondHalfAnimationDuration = 1.167f - halfAnimationDuration;
+        float halfAnimationDuration = 0.3f;
+        float secondHalfAnimationDuration = 1.433f - halfAnimationDuration;
         Vector3 startPosition = transform.position;
         Vector3 directionToEnemy = enemyPosition - startPosition;
         float distanceToEnemy = Vector3.Magnitude(directionToEnemy);
         float speedOnFirstHalf = distanceToEnemy / halfAnimationDuration;
         float traveledDistance = 0f;
 
-        while (traveledDistance < distanceToEnemy - 2f)
+        while (traveledDistance < distanceToEnemy - 3f)
         {
             transform.position = Vector3.MoveTowards(transform.position, enemyPosition, speedOnFirstHalf * Time.deltaTime);
             traveledDistance += speedOnFirstHalf * Time.deltaTime;
@@ -66,6 +80,16 @@ public class CharacterAnimationController : MonoBehaviour
         StartRelaxAnimation();
     }
 
+    private void InitializeDictionary()
+    {
+        _attackAnimationPairs = new Dictionary<string, AnimationReferenceAsset>
+        {
+            {"Tornado", _takeDamageTornado},
+            {"Vortex Blade", _takeDamageFromBlade},
+            {"Deadly Spike", _takeDamageSpike}
+        };
+    }
+
     public void StartCastAnimation()
     {
         TrackEntry trackEntry = _skeletonAnim.state.SetAnimation(0, _cast, false);
@@ -77,11 +101,24 @@ public class CharacterAnimationController : MonoBehaviour
         };
     }
 
-    public void StartTakingDamageAnimation()
+    public void StartTakingDamageAnimation(string perkName)
     {
-        TrackEntry trackEntry = _skeletonAnim.state.SetAnimation(0, _takeDamage, false);
-        trackEntry.TimeScale = 1f;
-        trackEntry.Complete += (state) => { StartRelaxAnimation();};
+        if (_attackAnimationPairs == null) InitializeDictionary();
+
+        if (_attackAnimationPairs.TryGetValue(perkName, out var animation))
+        {
+            StartTakingDamageAnimation(animation, 1f);
+        }
+        else
+        {
+            StartTakingDamageAnimation(_takeDamage, 1f);
+        }
+    }
+    private void StartTakingDamageAnimation(AnimationReferenceAsset animation, float timeScale)
+    {
+        TrackEntry trackEntry = _skeletonAnim.state.SetAnimation(0, animation, false);
+        trackEntry.TimeScale = timeScale;
+        trackEntry.Complete += (state) => { StartRelaxAnimation(); };
     }
 
     public void StartDeathAnimation()
@@ -91,8 +128,21 @@ public class CharacterAnimationController : MonoBehaviour
         trackEntry.Complete += (state) => { gameObject.SetActive(false); };
     }
 
-    public void StartDefenceAnimation()
+    public void StartWinAnimation()
     {
-        _skeletonAnim.state.SetAnimation(0, _defence, false).TimeScale = 1f;
+        TrackEntry trackEntry = _skeletonAnim.state.SetAnimation(0, _winPose, false);
+        trackEntry.TimeScale = 1f;
+        trackEntry.Complete += (state) => 
+        {
+            StartRelaxAnimation();
+            StartCoroutine(WinAnimationAfterDelay());
+        };
+    }
+
+    private IEnumerator WinAnimationAfterDelay()
+    {
+        yield return new WaitForSeconds(Random.Range(2f, 2.5f));
+
+        StartWinAnimation();
     }
 }

@@ -70,14 +70,14 @@ IL2CPP_EXTERN_C RuntimeClass* GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E54
 IL2CPP_EXTERN_C RuntimeClass* Glyph_tC58ED6BC718B82A55B7E1A3690A289FFA8EBEFD1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_mA742BAFFA1D2C33D93731258D03686051DD22B98_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_m42F4E1C6CFD9D889431FACA1EC4FA0CFD49BBF4C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_m56744B1E3086E24D03D24BA48022876D86ED1C25_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_mC73C2F73F8CBD794006114EAB780C2227A7307E1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_mEDCA1FCB26A509EEB1E1FDB5031380E479AC007C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_m949403FFC1CA942A8E079B68690DD0403B97CCCE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m3A6B7533185FE0E994960D5DB16D0BCDFAD9139A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m70BC2BBCAA532A1588DB59CA7E556F541F32621D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mB16774A7E717953B089B111C42D5DD2256E30F69_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m31E439898C27BC917E851D5219B3EC4E53618ADE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_RuntimeMethod_var;
 
 struct GlyphU5BU5D_tDC8ECA36264C4DC872F3D9429BD56E9B40300E4B;
 struct GlyphMarshallingStructU5BU5D_t622C5D3F6563BEE95999E5D27EA9C4DC087C682D;
@@ -1739,19 +1739,19 @@ public:
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>::get_Count()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m3A6B7533185FE0E994960D5DB16D0BCDFAD9139A_gshared_inline (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>::get_Item(System.Int32)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_gshared_inline (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, int32_t ___index0, const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_gshared_inline (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, int32_t ___index0, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>::Clear()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Clear_m949403FFC1CA942A8E079B68690DD0403B97CCCE_gshared (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>::Add(!0)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F_gshared (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  ___item0, const RuntimeMethod* method);
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F_gshared (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  ___item0, const RuntimeMethod* method);
 // System.Int32 System.Collections.Generic.List`1<System.UInt32>::get_Count()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m70BC2BBCAA532A1588DB59CA7E556F541F32621D_gshared_inline (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 * __this, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<System.UInt32>::get_Item(System.Int32)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t List_1_get_Item_mB16774A7E717953B089B111C42D5DD2256E30F69_gshared_inline (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 * __this, int32_t ___index0, const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t List_1_get_Item_m31E439898C27BC917E851D5219B3EC4E53618ADE_gshared_inline (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 * __this, int32_t ___index0, const RuntimeMethod* method);
 // System.Void UnityEngine.TextCore.LowLevel.FontEngine::SetMarshallingArraySize<UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord>(T[]&,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_m56744B1E3086E24D03D24BA48022876D86ED1C25_gshared (GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609** ___marshallingArray0, int32_t ___recordCount1, const RuntimeMethod* method);
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_mEDCA1FCB26A509EEB1E1FDB5031380E479AC007C_gshared (GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609** ___marshallingArray0, int32_t ___recordCount1, const RuntimeMethod* method);
 // System.Void UnityEngine.TextCore.LowLevel.FontEngine::GenericListToMarshallingArray<System.UInt32>(System.Collections.Generic.List`1<T>&,T[]&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_m42F4E1C6CFD9D889431FACA1EC4FA0CFD49BBF4C_gshared (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 ** ___srcList0, UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF** ___dstArray1, const RuntimeMethod* method);
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_mC73C2F73F8CBD794006114EAB780C2227A7307E1_gshared (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 ** ___srcList0, UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF** ___dstArray1, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.Dictionary`2<System.UInt32,System.Object>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m5D54E695939D13E41566390833F4B0DB613D4E27_gshared (Dictionary_2_t32479D928C553725424938B11A68D3CD8069EA75 * __this, const RuntimeMethod* method);
 
@@ -1847,9 +1847,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Mathf_NextPowerOfTwo_m89DB0674631948F
 // System.Int32 UnityEngine.Mathf::Max(System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Mathf_Max_mAB2544BF70651EC36982F5F4EBD250AEE283335A (int32_t ___a0, int32_t ___b1, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>::get_Item(System.Int32)
-inline GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_inline (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, int32_t ___index0, const RuntimeMethod* method)
+inline GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_inline (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, int32_t ___index0, const RuntimeMethod* method)
 {
-	return ((  GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  (*) (List_1_tE870449A6BC21548542BC92F18B284004FA8668A *, int32_t, const RuntimeMethod*))List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_gshared_inline)(__this, ___index0, method);
+	return ((  GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  (*) (List_1_tE870449A6BC21548542BC92F18B284004FA8668A *, int32_t, const RuntimeMethod*))List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_gshared_inline)(__this, ___index0, method);
 }
 // System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphToTexture_Internal(System.UInt32,System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FontEngine_TryAddGlyphToTexture_Internal_m1A0E3323EADB617657BF97F660649C6FDD1B14B7 (uint32_t ___glyphIndex0, int32_t ___padding1, int32_t ___packingMode2, GlyphRectU5BU5D_tD5D74BCDBD33C0E1CF2D67D5419C526C807D3BDA* ___freeGlyphRects3, int32_t* ___freeGlyphRectCount4, GlyphRectU5BU5D_tD5D74BCDBD33C0E1CF2D67D5419C526C807D3BDA* ___usedGlyphRects5, int32_t* ___usedGlyphRectCount6, int32_t ___renderMode7, Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * ___texture8, GlyphMarshallingStruct_t6944FAFBC02A2747B49417BF23EBA14EB5FE7A19 * ___glyph9, const RuntimeMethod* method);
@@ -1859,9 +1859,9 @@ inline void List_1_Clear_m949403FFC1CA942A8E079B68690DD0403B97CCCE (List_1_tE870
 	((  void (*) (List_1_tE870449A6BC21548542BC92F18B284004FA8668A *, const RuntimeMethod*))List_1_Clear_m949403FFC1CA942A8E079B68690DD0403B97CCCE_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>::Add(!0)
-inline void List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  ___item0, const RuntimeMethod* method)
+inline void List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  ___item0, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tE870449A6BC21548542BC92F18B284004FA8668A *, GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D , const RuntimeMethod*))List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F_gshared)(__this, ___item0, method);
+	((  void (*) (List_1_tE870449A6BC21548542BC92F18B284004FA8668A *, GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D , const RuntimeMethod*))List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F_gshared)(__this, ___item0, method);
 }
 // System.Int32 System.Collections.Generic.List`1<System.UInt32>::get_Count()
 inline int32_t List_1_get_Count_m70BC2BBCAA532A1588DB59CA7E556F541F32621D_inline (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 * __this, const RuntimeMethod* method)
@@ -1871,25 +1871,25 @@ inline int32_t List_1_get_Count_m70BC2BBCAA532A1588DB59CA7E556F541F32621D_inline
 // System.Int32 UnityEngine.TextCore.LowLevel.FontEngineUtilities::MaxValue(System.Int32,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FontEngineUtilities_MaxValue_m2EF659954522080160961E35BE6FDF1DD5C98FB7 (int32_t ___a0, int32_t ___b1, int32_t ___c2, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<System.UInt32>::get_Item(System.Int32)
-inline uint32_t List_1_get_Item_mB16774A7E717953B089B111C42D5DD2256E30F69_inline (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 * __this, int32_t ___index0, const RuntimeMethod* method)
+inline uint32_t List_1_get_Item_m31E439898C27BC917E851D5219B3EC4E53618ADE_inline (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 * __this, int32_t ___index0, const RuntimeMethod* method)
 {
-	return ((  uint32_t (*) (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 *, int32_t, const RuntimeMethod*))List_1_get_Item_mB16774A7E717953B089B111C42D5DD2256E30F69_gshared_inline)(__this, ___index0, method);
+	return ((  uint32_t (*) (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 *, int32_t, const RuntimeMethod*))List_1_get_Item_m31E439898C27BC917E851D5219B3EC4E53618ADE_gshared_inline)(__this, ___index0, method);
 }
 // System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphsToTexture_Internal(System.UInt32[],System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct[],System.Int32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FontEngine_TryAddGlyphsToTexture_Internal_mB0FE279387211C00BF9E5891C39462CD6F159CE8 (UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF* ___glyphIndex0, int32_t ___padding1, int32_t ___packingMode2, GlyphRectU5BU5D_tD5D74BCDBD33C0E1CF2D67D5419C526C807D3BDA* ___freeGlyphRects3, int32_t* ___freeGlyphRectCount4, GlyphRectU5BU5D_tD5D74BCDBD33C0E1CF2D67D5419C526C807D3BDA* ___usedGlyphRects5, int32_t* ___usedGlyphRectCount6, int32_t ___renderMode7, Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * ___texture8, GlyphMarshallingStructU5BU5D_t622C5D3F6563BEE95999E5D27EA9C4DC087C682D* ___glyphs9, int32_t* ___glyphCount10, const RuntimeMethod* method);
 // System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::PopulatePairAdjustmentRecordMarshallingArray_from_GlyphIndexes(System.UInt32[],System.Int32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FontEngine_PopulatePairAdjustmentRecordMarshallingArray_from_GlyphIndexes_m209060A34247119B382FE9327CDDC85B8A04DEDF (UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF* ___glyphIndexes0, int32_t* ___recordCount1, const RuntimeMethod* method);
 // System.Void UnityEngine.TextCore.LowLevel.FontEngine::SetMarshallingArraySize<UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord>(T[]&,System.Int32)
-inline void FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_m56744B1E3086E24D03D24BA48022876D86ED1C25 (GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609** ___marshallingArray0, int32_t ___recordCount1, const RuntimeMethod* method)
+inline void FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_mEDCA1FCB26A509EEB1E1FDB5031380E479AC007C (GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609** ___marshallingArray0, int32_t ___recordCount1, const RuntimeMethod* method)
 {
-	((  void (*) (GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609**, int32_t, const RuntimeMethod*))FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_m56744B1E3086E24D03D24BA48022876D86ED1C25_gshared)(___marshallingArray0, ___recordCount1, method);
+	((  void (*) (GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609**, int32_t, const RuntimeMethod*))FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_mEDCA1FCB26A509EEB1E1FDB5031380E479AC007C_gshared)(___marshallingArray0, ___recordCount1, method);
 }
 // System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::GetGlyphPairAdjustmentRecordsFromMarshallingArray(UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FontEngine_GetGlyphPairAdjustmentRecordsFromMarshallingArray_m0B720E99C766368DA85190A049A4F70C5805DFD4 (GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609* ___glyphPairAdjustmentRecords0, const RuntimeMethod* method);
 // System.Void UnityEngine.TextCore.LowLevel.FontEngine::GenericListToMarshallingArray<System.UInt32>(System.Collections.Generic.List`1<T>&,T[]&)
-inline void FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_m42F4E1C6CFD9D889431FACA1EC4FA0CFD49BBF4C (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 ** ___srcList0, UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF** ___dstArray1, const RuntimeMethod* method)
+inline void FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_mC73C2F73F8CBD794006114EAB780C2227A7307E1 (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 ** ___srcList0, UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF** ___dstArray1, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 **, UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF**, const RuntimeMethod*))FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_m42F4E1C6CFD9D889431FACA1EC4FA0CFD49BBF4C_gshared)(___srcList0, ___dstArray1, method);
+	((  void (*) (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 **, UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF**, const RuntimeMethod*))FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_mC73C2F73F8CBD794006114EAB780C2227A7307E1_gshared)(___srcList0, ___dstArray1, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.UInt32,UnityEngine.TextCore.Glyph>::.ctor()
 inline void Dictionary_2__ctor_mA742BAFFA1D2C33D93731258D03686051DD22B98 (Dictionary_2_tDA5C03A58B5E004C6D454EF31BF9C5307FE785BE * __this, const RuntimeMethod* method)
@@ -2166,9 +2166,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_familyName_mF2284C683441750
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_familyName_mF2284C683441750136664CE2F54A6A1B8D025BCF_AdjustorThunk (RuntimeObject * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_familyName_mF2284C683441750136664CE2F54A6A1B8D025BCF(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.TextCore.FaceInfo::set_styleName(System.String)
@@ -2182,9 +2181,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_styleName_m2EA494E818600812
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_styleName_m2EA494E818600812D1EF63E1B861D930D72DDB2F_AdjustorThunk (RuntimeObject * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_styleName_m2EA494E818600812D1EF63E1B861D930D72DDB2F(_thisAdjusted, ___value0, method);
 }
 // System.Int32 UnityEngine.TextCore.FaceInfo::get_pointSize()
@@ -2205,9 +2203,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  int32_t FaceInfo_get_pointSize_m3C6775E1AE5F27EAAB93CC84480B14AFBDB5E330_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	int32_t _returnValue;
 	_returnValue = FaceInfo_get_pointSize_m3C6775E1AE5F27EAAB93CC84480B14AFBDB5E330(_thisAdjusted, method);
 	return _returnValue;
@@ -2223,9 +2220,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_pointSize_m26A4A24116D162BB
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_pointSize_m26A4A24116D162BB182959D46AB2FA6576A84CF9_AdjustorThunk (RuntimeObject * __this, int32_t ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_pointSize_m26A4A24116D162BB182959D46AB2FA6576A84CF9(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_scale()
@@ -2246,9 +2242,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_scale_mA059FCEE1F13BBDF846AB8D8B8EDA468F4FCD2A4_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_scale_mA059FCEE1F13BBDF846AB8D8B8EDA468F4FCD2A4(_thisAdjusted, method);
 	return _returnValue;
@@ -2264,9 +2259,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_scale_mA870178A90FC90A4E7D7
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_scale_mA870178A90FC90A4E7D7149972CF190112244D9C_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_scale_mA870178A90FC90A4E7D7149972CF190112244D9C(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_lineHeight()
@@ -2287,9 +2281,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_lineHeight_m4BC0162351D2C7E607ECDF93534DAF0169AAEFE5_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_lineHeight_m4BC0162351D2C7E607ECDF93534DAF0169AAEFE5(_thisAdjusted, method);
 	return _returnValue;
@@ -2305,9 +2298,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_lineHeight_mF771EE64A254D4E
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_lineHeight_mF771EE64A254D4ED012070BDC94B06545668D347_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_lineHeight_mF771EE64A254D4ED012070BDC94B06545668D347(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_ascentLine()
@@ -2328,9 +2320,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_ascentLine_m69928E2E998FA9441C7628BF7F8D9E888470D983_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_ascentLine_m69928E2E998FA9441C7628BF7F8D9E888470D983(_thisAdjusted, method);
 	return _returnValue;
@@ -2346,9 +2337,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_ascentLine_m510C3CF1B961D9B
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_ascentLine_m510C3CF1B961D9BEDD79A4BAA7D65742C33AAD06_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_ascentLine_m510C3CF1B961D9BEDD79A4BAA7D65742C33AAD06(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_capLine()
@@ -2369,9 +2359,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_capLine_m16556D45E8441052D15DAE83CDB3FC31635BE0A7_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_capLine_m16556D45E8441052D15DAE83CDB3FC31635BE0A7(_thisAdjusted, method);
 	return _returnValue;
@@ -2387,9 +2376,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_capLine_m6FB88B8953008824E8
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_capLine_m6FB88B8953008824E84DBA88B3896DD98A1E8926_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_capLine_m6FB88B8953008824E84DBA88B3896DD98A1E8926(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_meanLine()
@@ -2410,9 +2398,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_meanLine_m10957577CE99FF794523FA34E4ED873B4888A11D_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_meanLine_m10957577CE99FF794523FA34E4ED873B4888A11D(_thisAdjusted, method);
 	return _returnValue;
@@ -2428,9 +2415,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_meanLine_m9118E1C37F756267B
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_meanLine_m9118E1C37F756267BF93CE1E94C880FACB70E2A2_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_meanLine_m9118E1C37F756267BF93CE1E94C880FACB70E2A2(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_baseline()
@@ -2451,9 +2437,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_baseline_m7EB9429D8D329E5DA5DB890CEF02A6C015C056D6_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_baseline_m7EB9429D8D329E5DA5DB890CEF02A6C015C056D6(_thisAdjusted, method);
 	return _returnValue;
@@ -2469,9 +2454,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_baseline_m83DA240FEADBE1160
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_baseline_m83DA240FEADBE11609EB11B79AC9FE6165ABBAC7_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_baseline_m83DA240FEADBE11609EB11B79AC9FE6165ABBAC7(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_descentLine()
@@ -2492,9 +2476,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_descentLine_m0AEF0D85997836B841605DCE178ABA42A92C6EFA_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_descentLine_m0AEF0D85997836B841605DCE178ABA42A92C6EFA(_thisAdjusted, method);
 	return _returnValue;
@@ -2510,9 +2493,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_descentLine_m91AB76A124FE9E
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_descentLine_m91AB76A124FE9E536BD72785512B2C623BA2B067_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_descentLine_m91AB76A124FE9E536BD72785512B2C623BA2B067(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_superscriptOffset()
@@ -2533,9 +2515,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_superscriptOffset_mAF8D37F78A79780652BAE40384F0C4DED8350769_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_superscriptOffset_mAF8D37F78A79780652BAE40384F0C4DED8350769(_thisAdjusted, method);
 	return _returnValue;
@@ -2551,9 +2532,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_superscriptOffset_mE0422507
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_superscriptOffset_mE0422507D4C2DE3F2CFF7286F90462675741D15E_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_superscriptOffset_mE0422507D4C2DE3F2CFF7286F90462675741D15E(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_superscriptSize()
@@ -2574,9 +2554,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_superscriptSize_m7FBEC1B0C97A7DC9D581AF9ADBDDCF14F7565F1A_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_superscriptSize_m7FBEC1B0C97A7DC9D581AF9ADBDDCF14F7565F1A(_thisAdjusted, method);
 	return _returnValue;
@@ -2592,9 +2571,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_superscriptSize_mCDE84F4EA4
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_superscriptSize_mCDE84F4EA47D69B7D783FE62DA78656BBC17C07E_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_superscriptSize_mCDE84F4EA47D69B7D783FE62DA78656BBC17C07E(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_subscriptOffset()
@@ -2615,9 +2593,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_subscriptOffset_mD3F7F2F5F93364977E3F81E9B693D5CDB1419088_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_subscriptOffset_mD3F7F2F5F93364977E3F81E9B693D5CDB1419088(_thisAdjusted, method);
 	return _returnValue;
@@ -2633,9 +2610,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_subscriptOffset_mCF79D81531
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_subscriptOffset_mCF79D815311C70E3E8CC2BC241FEFE39CC992A39_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_subscriptOffset_mCF79D815311C70E3E8CC2BC241FEFE39CC992A39(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_subscriptSize()
@@ -2656,9 +2632,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_subscriptSize_mEC9AEAD24A51AB19FFCC09AE919EF656ED2C6413_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_subscriptSize_mEC9AEAD24A51AB19FFCC09AE919EF656ED2C6413(_thisAdjusted, method);
 	return _returnValue;
@@ -2674,9 +2649,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_subscriptSize_m61497C0D29FE
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_subscriptSize_m61497C0D29FE50D498648DEC0FAADA9ED151387A_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_subscriptSize_m61497C0D29FE50D498648DEC0FAADA9ED151387A(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_underlineOffset()
@@ -2697,9 +2671,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_underlineOffset_m0F2900E06388C697807D43285BD4979E9D0BDA50_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_underlineOffset_m0F2900E06388C697807D43285BD4979E9D0BDA50(_thisAdjusted, method);
 	return _returnValue;
@@ -2715,9 +2688,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_underlineOffset_mBE89D25E84
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_underlineOffset_mBE89D25E848FAF83FB750D95A93F6C051D798B54_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_underlineOffset_mBE89D25E848FAF83FB750D95A93F6C051D798B54(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_underlineThickness()
@@ -2738,9 +2710,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_underlineThickness_m07A6016172DE8DC1514CA780EBB80C32FA209F28_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_underlineThickness_m07A6016172DE8DC1514CA780EBB80C32FA209F28(_thisAdjusted, method);
 	return _returnValue;
@@ -2756,9 +2727,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_underlineThickness_m86B440D
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_underlineThickness_m86B440DB7CBDB6C588FBC03990B980A715726059_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_underlineThickness_m86B440DB7CBDB6C588FBC03990B980A715726059(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_strikethroughOffset()
@@ -2779,9 +2749,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_strikethroughOffset_m705C7A75FFA7E324582D6A1CC404ED4C8E8417EB_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_strikethroughOffset_m705C7A75FFA7E324582D6A1CC404ED4C8E8417EB(_thisAdjusted, method);
 	return _returnValue;
@@ -2797,9 +2766,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_strikethroughOffset_m9ACD0A
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_strikethroughOffset_m9ACD0A24A8EC5FEB90596BA43E8E8D8FF7EA0623_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_strikethroughOffset_m9ACD0A24A8EC5FEB90596BA43E8E8D8FF7EA0623(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.TextCore.FaceInfo::set_strikethroughThickness(System.Single)
@@ -2813,9 +2781,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_strikethroughThickness_mE26
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_strikethroughThickness_mE26FAFBC6C984F88F68F7507CFE8AFB28E1932E7_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_strikethroughThickness_mE26FAFBC6C984F88F68F7507CFE8AFB28E1932E7(_thisAdjusted, ___value0, method);
 }
 // System.Single UnityEngine.TextCore.FaceInfo::get_tabWidth()
@@ -2836,9 +2803,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float FaceInfo_get_tabWidth_mFBE94B2FBBB301B0FC1011D49A96032A0EE1A588_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = FaceInfo_get_tabWidth_mFBE94B2FBBB301B0FC1011D49A96032A0EE1A588(_thisAdjusted, method);
 	return _returnValue;
@@ -2854,9 +2820,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FaceInfo_set_tabWidth_mE024C95E768A214E3
 }
 IL2CPP_EXTERN_C  void FaceInfo_set_tabWidth_mE024C95E768A214E3C85781753658B437F4B6B54_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
+	FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 * _thisAdjusted = reinterpret_cast<FaceInfo_t3A29F58B4C0435D2D76E3474E2B9D03F8A20C979 *>(__this + _offset);
 	FaceInfo_set_tabWidth_mE024C95E768A214E3C85781753658B437F4B6B54(_thisAdjusted, ___value0, method);
 }
 #ifdef __clang__
@@ -3123,10 +3088,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FontEngine_TryAddGlyphToTexture_mF2513F6
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GlyphRectU5BU5D_tD5D74BCDBD33C0E1CF2D67D5419C526C807D3BDA_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Glyph_tC58ED6BC718B82A55B7E1A3690A289FFA8EBEFD1_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_m949403FFC1CA942A8E079B68690DD0403B97CCCE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m3A6B7533185FE0E994960D5DB16D0BCDFAD9139A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
@@ -3233,7 +3198,7 @@ IL_0062:
 		List_1_tE870449A6BC21548542BC92F18B284004FA8668A * L_25 = ___freeGlyphRects3;
 		int32_t L_26 = V_7;
 		GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  L_27;
-		L_27 = List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_inline(L_25, L_26, /*hidden argument*/List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_RuntimeMethod_var);
+		L_27 = List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_inline(L_25, L_26, /*hidden argument*/List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_RuntimeMethod_var);
 		(L_23)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(L_24), (GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D )L_27);
 	}
 
@@ -3255,7 +3220,7 @@ IL_0082:
 		List_1_tE870449A6BC21548542BC92F18B284004FA8668A * L_33 = ___usedGlyphRects4;
 		int32_t L_34 = V_7;
 		GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  L_35;
-		L_35 = List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_inline(L_33, L_34, /*hidden argument*/List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_RuntimeMethod_var);
+		L_35 = List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_inline(L_33, L_34, /*hidden argument*/List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_RuntimeMethod_var);
 		(L_31)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(L_32), (GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D )L_35);
 	}
 
@@ -3332,7 +3297,7 @@ IL_00fd:
 		int32_t L_62 = V_12;
 		int32_t L_63 = L_62;
 		GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  L_64 = (L_61)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_63));
-		List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F(L_60, L_64, /*hidden argument*/List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F_RuntimeMethod_var);
+		List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F(L_60, L_64, /*hidden argument*/List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F_RuntimeMethod_var);
 	}
 
 IL_011c:
@@ -3353,7 +3318,7 @@ IL_011c:
 		int32_t L_70 = V_12;
 		int32_t L_71 = L_70;
 		GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  L_72 = (L_69)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_71));
-		List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F(L_68, L_72, /*hidden argument*/List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F_RuntimeMethod_var);
+		List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F(L_68, L_72, /*hidden argument*/List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F_RuntimeMethod_var);
 	}
 
 IL_013b:
@@ -3414,12 +3379,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FontEngine_TryAddGlyphsToTexture_m61337C
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GlyphRectU5BU5D_tD5D74BCDBD33C0E1CF2D67D5419C526C807D3BDA_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GlyphU5BU5D_tDC8ECA36264C4DC872F3D9429BD56E9B40300E4B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Glyph_tC58ED6BC718B82A55B7E1A3690A289FFA8EBEFD1_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_m949403FFC1CA942A8E079B68690DD0403B97CCCE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m3A6B7533185FE0E994960D5DB16D0BCDFAD9139A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m70BC2BBCAA532A1588DB59CA7E556F541F32621D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mB16774A7E717953B089B111C42D5DD2256E30F69_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m31E439898C27BC917E851D5219B3EC4E53618ADE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -3670,7 +3635,7 @@ IL_0106:
 		List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 * L_53 = ___glyphIndexes0;
 		int32_t L_54 = V_15;
 		uint32_t L_55;
-		L_55 = List_1_get_Item_mB16774A7E717953B089B111C42D5DD2256E30F69_inline(L_53, L_54, /*hidden argument*/List_1_get_Item_mB16774A7E717953B089B111C42D5DD2256E30F69_RuntimeMethod_var);
+		L_55 = List_1_get_Item_m31E439898C27BC917E851D5219B3EC4E53618ADE_inline(L_53, L_54, /*hidden argument*/List_1_get_Item_m31E439898C27BC917E851D5219B3EC4E53618ADE_RuntimeMethod_var);
 		(L_51)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(L_52), (uint32_t)L_55);
 	}
 
@@ -3692,7 +3657,7 @@ IL_0122:
 		List_1_tE870449A6BC21548542BC92F18B284004FA8668A * L_61 = ___freeGlyphRects3;
 		int32_t L_62 = V_15;
 		GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  L_63;
-		L_63 = List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_inline(L_61, L_62, /*hidden argument*/List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_RuntimeMethod_var);
+		L_63 = List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_inline(L_61, L_62, /*hidden argument*/List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_RuntimeMethod_var);
 		(L_59)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(L_60), (GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D )L_63);
 	}
 
@@ -3714,7 +3679,7 @@ IL_0141:
 		List_1_tE870449A6BC21548542BC92F18B284004FA8668A * L_69 = ___usedGlyphRects4;
 		int32_t L_70 = V_15;
 		GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  L_71;
-		L_71 = List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_inline(L_69, L_70, /*hidden argument*/List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_RuntimeMethod_var);
+		L_71 = List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_inline(L_69, L_70, /*hidden argument*/List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_RuntimeMethod_var);
 		(L_67)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(L_68), (GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D )L_71);
 	}
 
@@ -3849,7 +3814,7 @@ IL_0215:
 		int32_t L_115 = V_21;
 		int32_t L_116 = L_115;
 		GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  L_117 = (L_114)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_116));
-		List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F(L_113, L_117, /*hidden argument*/List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F_RuntimeMethod_var);
+		List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F(L_113, L_117, /*hidden argument*/List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F_RuntimeMethod_var);
 	}
 
 IL_0233:
@@ -3870,7 +3835,7 @@ IL_0233:
 		int32_t L_123 = V_21;
 		int32_t L_124 = L_123;
 		GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  L_125 = (L_122)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_124));
-		List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F(L_121, L_125, /*hidden argument*/List_1_Add_m0571434FBDE53644D999B834DAD977310BAD102F_RuntimeMethod_var);
+		List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F(L_121, L_125, /*hidden argument*/List_1_Add_m9501E9144E21625B5FBF950FE146C5944493044F_RuntimeMethod_var);
 	}
 
 IL_0252:
@@ -3923,7 +3888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_m56744B1E3086E24D03D24BA48022876D86ED1C25_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_mEDCA1FCB26A509EEB1E1FDB5031380E479AC007C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -3952,7 +3917,7 @@ IL_0016:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var);
 		int32_t L_4 = V_0;
-		FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_m56744B1E3086E24D03D24BA48022876D86ED1C25((GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609**)(((FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_StaticFields*)il2cpp_codegen_static_fields_for(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var))->get_address_of_s_PairAdjustmentRecords_MarshallingArray_6()), L_4, /*hidden argument*/FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_m56744B1E3086E24D03D24BA48022876D86ED1C25_RuntimeMethod_var);
+		FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_mEDCA1FCB26A509EEB1E1FDB5031380E479AC007C((GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609**)(((FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_StaticFields*)il2cpp_codegen_static_fields_for(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var))->get_address_of_s_PairAdjustmentRecords_MarshallingArray_6()), L_4, /*hidden argument*/FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_mEDCA1FCB26A509EEB1E1FDB5031380E479AC007C_RuntimeMethod_var);
 		GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609* L_5 = ((FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_StaticFields*)il2cpp_codegen_static_fields_for(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var))->get_s_PairAdjustmentRecords_MarshallingArray_6();
 		int32_t L_6;
 		L_6 = FontEngine_GetGlyphPairAdjustmentRecordsFromMarshallingArray_m0B720E99C766368DA85190A049A4F70C5805DFD4(L_5, /*hidden argument*/NULL);
@@ -3976,8 +3941,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_m42F4E1C6CFD9D889431FACA1EC4FA0CFD49BBF4C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_m56744B1E3086E24D03D24BA48022876D86ED1C25_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_mC73C2F73F8CBD794006114EAB780C2227A7307E1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_mEDCA1FCB26A509EEB1E1FDB5031380E479AC007C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -3985,7 +3950,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A
 	GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609* V_1 = NULL;
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var);
-		FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_m42F4E1C6CFD9D889431FACA1EC4FA0CFD49BBF4C((List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 **)(&___glyphIndexes0), (UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF**)(((FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_StaticFields*)il2cpp_codegen_static_fields_for(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var))->get_address_of_s_GlyphIndexes_MarshallingArray_A_1()), /*hidden argument*/FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_m42F4E1C6CFD9D889431FACA1EC4FA0CFD49BBF4C_RuntimeMethod_var);
+		FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_mC73C2F73F8CBD794006114EAB780C2227A7307E1((List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 **)(&___glyphIndexes0), (UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF**)(((FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_StaticFields*)il2cpp_codegen_static_fields_for(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var))->get_address_of_s_GlyphIndexes_MarshallingArray_A_1()), /*hidden argument*/FontEngine_GenericListToMarshallingArray_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_mC73C2F73F8CBD794006114EAB780C2227A7307E1_RuntimeMethod_var);
 		UInt32U5BU5D_tCF06F1E9E72E0302C762578FF5358CC523F2A2CF* L_0 = ((FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_StaticFields*)il2cpp_codegen_static_fields_for(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var))->get_s_GlyphIndexes_MarshallingArray_A_1();
 		int32_t* L_1 = ___recordCount1;
 		int32_t L_2;
@@ -4009,7 +3974,7 @@ IL_0027:
 		IL2CPP_RUNTIME_CLASS_INIT(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var);
 		int32_t* L_6 = ___recordCount1;
 		int32_t L_7 = *((int32_t*)L_6);
-		FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_m56744B1E3086E24D03D24BA48022876D86ED1C25((GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609**)(((FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_StaticFields*)il2cpp_codegen_static_fields_for(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var))->get_address_of_s_PairAdjustmentRecords_MarshallingArray_6()), L_7, /*hidden argument*/FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_m56744B1E3086E24D03D24BA48022876D86ED1C25_RuntimeMethod_var);
+		FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_mEDCA1FCB26A509EEB1E1FDB5031380E479AC007C((GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609**)(((FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_StaticFields*)il2cpp_codegen_static_fields_for(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var))->get_address_of_s_PairAdjustmentRecords_MarshallingArray_6()), L_7, /*hidden argument*/FontEngine_SetMarshallingArraySize_TisGlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169_mEDCA1FCB26A509EEB1E1FDB5031380E479AC007C_RuntimeMethod_var);
 		GlyphPairAdjustmentRecordU5BU5D_tC755C781D08A880F79F50795009CC0D0CA8AE609* L_8 = ((FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_StaticFields*)il2cpp_codegen_static_fields_for(FontEngine_tB40C839EB1E69BEEA23F0D26EA1BCB883CC62AF5_il2cpp_TypeInfo_var))->get_s_PairAdjustmentRecords_MarshallingArray_6();
 		int32_t L_9;
 		L_9 = FontEngine_GetGlyphPairAdjustmentRecordsFromMarshallingArray_m0B720E99C766368DA85190A049A4F70C5805DFD4(L_8, /*hidden argument*/NULL);
@@ -4468,9 +4433,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  uint32_t GlyphAdjustmentRecord_get_glyphIndex_mCD420C739E19E446152534AFA80A6113C0DBCC55_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA *>(__this + _offset);
+	GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA * _thisAdjusted = reinterpret_cast<GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA *>(__this + _offset);
 	uint32_t _returnValue;
 	_returnValue = GlyphAdjustmentRecord_get_glyphIndex_mCD420C739E19E446152534AFA80A6113C0DBCC55(_thisAdjusted, method);
 	return _returnValue;
@@ -4494,9 +4458,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3  GlyphAdjustmentRecord_get_glyphValueRecord_mAC27920271FB7166EE305BACE1D595CAA57872EE_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA *>(__this + _offset);
+	GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA * _thisAdjusted = reinterpret_cast<GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA *>(__this + _offset);
 	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3  _returnValue;
 	_returnValue = GlyphAdjustmentRecord_get_glyphValueRecord_mAC27920271FB7166EE305BACE1D595CAA57872EE(_thisAdjusted, method);
 	return _returnValue;
@@ -4543,9 +4506,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float GlyphMetrics_get_width_m4E2BCD2B54F121478C1D23C43FB6E8C0EF71C70F_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
+	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
 	float _returnValue;
 	_returnValue = GlyphMetrics_get_width_m4E2BCD2B54F121478C1D23C43FB6E8C0EF71C70F(_thisAdjusted, method);
 	return _returnValue;
@@ -4568,9 +4530,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float GlyphMetrics_get_height_m742B169DCF2892774ACEC4F25310CDC0C7F1D85F_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
+	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
 	float _returnValue;
 	_returnValue = GlyphMetrics_get_height_m742B169DCF2892774ACEC4F25310CDC0C7F1D85F(_thisAdjusted, method);
 	return _returnValue;
@@ -4593,9 +4554,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float GlyphMetrics_get_horizontalBearingX_m8474B6C9DB0D4D36516FCAC03B6ECBDAF49247E0_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
+	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
 	float _returnValue;
 	_returnValue = GlyphMetrics_get_horizontalBearingX_m8474B6C9DB0D4D36516FCAC03B6ECBDAF49247E0(_thisAdjusted, method);
 	return _returnValue;
@@ -4618,9 +4578,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float GlyphMetrics_get_horizontalBearingY_m2C5A73B899AFF5F5F594F447160ADB6E0523C16A_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
+	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
 	float _returnValue;
 	_returnValue = GlyphMetrics_get_horizontalBearingY_m2C5A73B899AFF5F5F594F447160ADB6E0523C16A(_thisAdjusted, method);
 	return _returnValue;
@@ -4643,9 +4602,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float GlyphMetrics_get_horizontalAdvance_mB204F2676223D5BEF5FEFF8969B159B39F1A617A_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
+	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
 	float _returnValue;
 	_returnValue = GlyphMetrics_get_horizontalAdvance_mB204F2676223D5BEF5FEFF8969B159B39F1A617A(_thisAdjusted, method);
 	return _returnValue;
@@ -4669,9 +4627,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GlyphMetrics__ctor_m6146EC37C12EF153771A
 }
 IL2CPP_EXTERN_C  void GlyphMetrics__ctor_m6146EC37C12EF153771AEF9983A63B5EBAE0CEFB_AdjustorThunk (RuntimeObject * __this, float ___width0, float ___height1, float ___bearingX2, float ___bearingY3, float ___advance4, const RuntimeMethod* method)
 {
-	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
+	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
 	GlyphMetrics__ctor_m6146EC37C12EF153771AEF9983A63B5EBAE0CEFB(_thisAdjusted, ___width0, ___height1, ___bearingX2, ___bearingY3, ___advance4, method);
 }
 // System.Int32 UnityEngine.TextCore.GlyphMetrics::GetHashCode()
@@ -4702,9 +4659,8 @@ IL_0014:
 }
 IL2CPP_EXTERN_C  int32_t GlyphMetrics_GetHashCode_m4F7985D656AFB70AE746F9A2513D39D3DFF9CD73_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
+	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
 	int32_t _returnValue;
 	_returnValue = GlyphMetrics_GetHashCode_m4F7985D656AFB70AE746F9A2513D39D3DFF9CD73(_thisAdjusted, method);
 	return _returnValue;
@@ -4738,9 +4694,8 @@ IL_0015:
 }
 IL2CPP_EXTERN_C  bool GlyphMetrics_Equals_mCCF68C73B7AE05D97A0D4459384DABD8BEB1097F_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___obj0, const RuntimeMethod* method)
 {
-	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
+	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
 	bool _returnValue;
 	_returnValue = GlyphMetrics_Equals_mCCF68C73B7AE05D97A0D4459384DABD8BEB1097F(_thisAdjusted, ___obj0, method);
 	return _returnValue;
@@ -4776,9 +4731,8 @@ IL_001a:
 }
 IL2CPP_EXTERN_C  bool GlyphMetrics_Equals_m54C8D6CAD2653668377F5F7A9F78FD7C4F05E4A8_AdjustorThunk (RuntimeObject * __this, GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B  ___other0, const RuntimeMethod* method)
 {
-	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
+	GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B * _thisAdjusted = reinterpret_cast<GlyphMetrics_t46B609AF0FC41272561342E8B5AEF35E4E1B537B *>(__this + _offset);
 	bool _returnValue;
 	_returnValue = GlyphMetrics_Equals_m54C8D6CAD2653668377F5F7A9F78FD7C4F05E4A8(_thisAdjusted, ___other0, method);
 	return _returnValue;
@@ -4818,9 +4772,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA  GlyphPairAdjustmentRecord_get_firstAdjustmentRecord_m92BC7561227D482635EF8AB93B8F20808017FBF8_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169 *>(__this + _offset);
+	GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169 * _thisAdjusted = reinterpret_cast<GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169 *>(__this + _offset);
 	GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA  _returnValue;
 	_returnValue = GlyphPairAdjustmentRecord_get_firstAdjustmentRecord_m92BC7561227D482635EF8AB93B8F20808017FBF8(_thisAdjusted, method);
 	return _returnValue;
@@ -4844,9 +4797,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA  GlyphPairAdjustmentRecord_get_secondAdjustmentRecord_m488CCBCB6802727334E2135E65EBB027A0A01EAD_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169 *>(__this + _offset);
+	GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169 * _thisAdjusted = reinterpret_cast<GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169 *>(__this + _offset);
 	GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA  _returnValue;
 	_returnValue = GlyphPairAdjustmentRecord_get_secondAdjustmentRecord_m488CCBCB6802727334E2135E65EBB027A0A01EAD(_thisAdjusted, method);
 	return _returnValue;
@@ -4877,9 +4829,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  int32_t GlyphRect_get_x_m004398D85360A389BCCD4F8B38347C0555F86166_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
+	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
 	int32_t _returnValue;
 	_returnValue = GlyphRect_get_x_m004398D85360A389BCCD4F8B38347C0555F86166(_thisAdjusted, method);
 	return _returnValue;
@@ -4902,9 +4853,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  int32_t GlyphRect_get_y_mBF2FC84CB7B201F30376B46390D37887B6AD6C20_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
+	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
 	int32_t _returnValue;
 	_returnValue = GlyphRect_get_y_mBF2FC84CB7B201F30376B46390D37887B6AD6C20(_thisAdjusted, method);
 	return _returnValue;
@@ -4927,9 +4877,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  int32_t GlyphRect_get_width_m8B9FBFA897082BA8E5F71222E1AAAB8D4A345A41_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
+	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
 	int32_t _returnValue;
 	_returnValue = GlyphRect_get_width_m8B9FBFA897082BA8E5F71222E1AAAB8D4A345A41(_thisAdjusted, method);
 	return _returnValue;
@@ -4952,9 +4901,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  int32_t GlyphRect_get_height_m319E96AD96E2087C9C9F5A1DF883F06A4D04104F_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
+	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
 	int32_t _returnValue;
 	_returnValue = GlyphRect_get_height_m319E96AD96E2087C9C9F5A1DF883F06A4D04104F(_thisAdjusted, method);
 	return _returnValue;
@@ -5000,9 +4948,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GlyphRect__ctor_m278B410AE9B6DE62FF8C244
 }
 IL2CPP_EXTERN_C  void GlyphRect__ctor_m278B410AE9B6DE62FF8C2445B8F3C6051B45ED61_AdjustorThunk (RuntimeObject * __this, int32_t ___x0, int32_t ___y1, int32_t ___width2, int32_t ___height3, const RuntimeMethod* method)
 {
-	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
+	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
 	GlyphRect__ctor_m278B410AE9B6DE62FF8C2445B8F3C6051B45ED61(_thisAdjusted, ___x0, ___y1, ___width2, ___height3, method);
 }
 // System.Int32 UnityEngine.TextCore.GlyphRect::GetHashCode()
@@ -5033,9 +4980,8 @@ IL_0014:
 }
 IL2CPP_EXTERN_C  int32_t GlyphRect_GetHashCode_m6DC4515E8C489593A329B5EA66895BD8C25DF913_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
+	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
 	int32_t _returnValue;
 	_returnValue = GlyphRect_GetHashCode_m6DC4515E8C489593A329B5EA66895BD8C25DF913(_thisAdjusted, method);
 	return _returnValue;
@@ -5069,9 +5015,8 @@ IL_0015:
 }
 IL2CPP_EXTERN_C  bool GlyphRect_Equals_m7F1DB9A21E584BEF84C5F83E6DD290EF54D655C1_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___obj0, const RuntimeMethod* method)
 {
-	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
+	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
 	bool _returnValue;
 	_returnValue = GlyphRect_Equals_m7F1DB9A21E584BEF84C5F83E6DD290EF54D655C1(_thisAdjusted, ___obj0, method);
 	return _returnValue;
@@ -5107,9 +5052,8 @@ IL_001a:
 }
 IL2CPP_EXTERN_C  bool GlyphRect_Equals_mB9F911262F09BC42CD2A461D8692D1C3ECAFCDCE_AdjustorThunk (RuntimeObject * __this, GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  ___other0, const RuntimeMethod* method)
 {
-	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
+	GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D * _thisAdjusted = reinterpret_cast<GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D *>(__this + _offset);
 	bool _returnValue;
 	_returnValue = GlyphRect_Equals_mB9F911262F09BC42CD2A461D8692D1C3ECAFCDCE(_thisAdjusted, ___other0, method);
 	return _returnValue;
@@ -5165,9 +5109,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float GlyphValueRecord_get_xPlacement_mAC5902DE9EE01D98DE9FBC6DB3A8BA7CDC525D14_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
+	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = GlyphValueRecord_get_xPlacement_mAC5902DE9EE01D98DE9FBC6DB3A8BA7CDC525D14(_thisAdjusted, method);
 	return _returnValue;
@@ -5190,9 +5133,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float GlyphValueRecord_get_yPlacement_m624E2DA69CC5A21117EE275359F66AF88DFC7D2D_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
+	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = GlyphValueRecord_get_yPlacement_m624E2DA69CC5A21117EE275359F66AF88DFC7D2D(_thisAdjusted, method);
 	return _returnValue;
@@ -5215,9 +5157,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float GlyphValueRecord_get_xAdvance_m577D4D32490C42890C3F15230479D931B91BDED5_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
+	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = GlyphValueRecord_get_xAdvance_m577D4D32490C42890C3F15230479D931B91BDED5(_thisAdjusted, method);
 	return _returnValue;
@@ -5240,9 +5181,8 @@ IL_000a:
 }
 IL2CPP_EXTERN_C  float GlyphValueRecord_get_yAdvance_m9659978FFA9B58B6AA7DE30199E405CF642BA34F_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
+	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
 	float _returnValue;
 	_returnValue = GlyphValueRecord_get_yAdvance_m9659978FFA9B58B6AA7DE30199E405CF642BA34F(_thisAdjusted, method);
 	return _returnValue;
@@ -5275,9 +5215,8 @@ IL_0014:
 }
 IL2CPP_EXTERN_C  int32_t GlyphValueRecord_GetHashCode_m5700595527E17C02B923199180E8983105563A71_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
 {
-	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
+	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
 	int32_t _returnValue;
 	_returnValue = GlyphValueRecord_GetHashCode_m5700595527E17C02B923199180E8983105563A71(_thisAdjusted, method);
 	return _returnValue;
@@ -5311,9 +5250,8 @@ IL_0015:
 }
 IL2CPP_EXTERN_C  bool GlyphValueRecord_Equals_mB12EE7C56E781B2DAFF2DEA1AFFFA1EC4DCBA943_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___obj0, const RuntimeMethod* method)
 {
-	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
+	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
 	bool _returnValue;
 	_returnValue = GlyphValueRecord_Equals_mB12EE7C56E781B2DAFF2DEA1AFFFA1EC4DCBA943(_thisAdjusted, ___obj0, method);
 	return _returnValue;
@@ -5349,9 +5287,8 @@ IL_001a:
 }
 IL2CPP_EXTERN_C  bool GlyphValueRecord_Equals_m716F55BA3DD7B7E97F3E35BE94A5922BE90FECF4_AdjustorThunk (RuntimeObject * __this, GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3  ___other0, const RuntimeMethod* method)
 {
-	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
+	GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 * _thisAdjusted = reinterpret_cast<GlyphValueRecord_tC3EE2C6CB47827CE4BD352D84B3E9E540567DAB3 *>(__this + _offset);
 	bool _returnValue;
 	_returnValue = GlyphValueRecord_Equals_m716F55BA3DD7B7E97F3E35BE94A5922BE90FECF4(_thisAdjusted, ___other0, method);
 	return _returnValue;
@@ -5366,7 +5303,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m3A6B753
 		return (int32_t)L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  List_1_get_Item_mD82D6243B1279DDE52B1B500B5DF60B509D30AC1_gshared_inline (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, int32_t ___index0, const RuntimeMethod* method)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlyphRect_t4F6A791326A28C2CEC6B13B0BD50A4F78280289D  List_1_get_Item_m6C3D0193E97367A21FA4FA8F18CB026A9B5A4751_gshared_inline (List_1_tE870449A6BC21548542BC92F18B284004FA8668A * __this, int32_t ___index0, const RuntimeMethod* method)
 {
 	{
 		int32_t L_0 = ___index0;
@@ -5396,7 +5333,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m70BC2BB
 		return (int32_t)L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t List_1_get_Item_mB16774A7E717953B089B111C42D5DD2256E30F69_gshared_inline (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 * __this, int32_t ___index0, const RuntimeMethod* method)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t List_1_get_Item_m31E439898C27BC917E851D5219B3EC4E53618ADE_gshared_inline (List_1_t023026A8F0D0D113E2B62213C8C74717BF7F4731 * __this, int32_t ___index0, const RuntimeMethod* method)
 {
 	{
 		int32_t L_0 = ___index0;

@@ -112,40 +112,40 @@ static Il2CppMethodPointer s_methodPointers[34] =
 };
 static const int32_t s_InvokerIndices[34] = 
 {
-	2784,
-	2296,
-	2817,
-	2817,
-	2817,
-	2861,
+	2517,
+	2124,
+	2545,
+	2545,
+	2545,
+	2580,
 	-1,
-	2784,
-	2861,
+	2517,
+	2580,
 	-1,
-	4294,
-	2861,
-	2784,
-	2861,
-	4382,
-	4447,
-	4447,
-	4079,
-	4447,
-	4447,
-	4447,
+	3894,
+	2580,
+	2517,
+	2580,
+	3974,
+	4039,
+	4039,
+	3686,
+	4039,
+	4039,
+	4039,
 	-1,
 	-1,
-	4294,
+	3894,
 	-1,
-	4079,
-	4447,
-	4382,
+	3686,
+	4039,
+	3974,
 	-1,
-	4382,
-	4447,
-	2784,
-	2861,
-	2861,
+	3974,
+	4039,
+	2517,
+	2580,
+	2580,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[4] = 
 {
@@ -154,44 +154,26 @@ static const Il2CppTokenRangePair s_rgctxIndices[4] =
 	{ 0x06000019, { 11, 1 } },
 	{ 0x0600001D, { 12, 6 } },
 };
-extern const uint32_t g_rgctx_List_1_Clear_mBEA8639E9DD3CB2A143EB04350ACB6AAA122FB14;
-extern const uint32_t g_rgctx_SubsystemManager_AddSubsystemSubset_TisIntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002_TisT_tD78F82763981BEB73973B2062C1B2617E54C693B_m0FA6A1055534B064895D3ECDB05A3E9F3BBE202E;
-extern const uint32_t g_rgctx_SubsystemManager_AddSubsystemSubset_TisSubsystemWithProvider_t1C1868CF8676F5596C1AD20A7CE69BDF7C7DE73E_TisT_tD78F82763981BEB73973B2062C1B2617E54C693B_m0C6AB902C1E25CCB21CD8AFD8219D8C1DA59BEA0;
-extern const uint32_t g_rgctx_SubsystemManager_AddSubsystemSubset_TisSubsystem_t2D97454A946149D608974CB6B674F5F5C613A6A4_TisT_tD78F82763981BEB73973B2062C1B2617E54C693B_mCA74243A9421F6DF806EED44937B1E3BB59744F0;
-extern const uint32_t g_rgctx_List_1_GetEnumerator_mD52B164EFC0D01384638E1EE71BE67EB87537899;
-extern const uint32_t g_rgctx_Enumerator_get_Current_m4621A84958C7991D9D4F9292F5CC1FF5DB464FB4;
-extern const uint32_t g_rgctx_TBaseTypeInList_t73E42101C2D9509BEF5C6BF3E5EC247DCB124649;
-extern const uint32_t g_rgctx_TQueryType_tB05AA4116AF5592AD12D9B1172DDE3A63A570996;
-extern const uint32_t g_rgctx_List_1_Add_m62BC36D148BF26E7DB8E862B6E5C8933B24EDDBB;
-extern const uint32_t g_rgctx_Enumerator_MoveNext_m82CBBD684CE3E87068C64F0D42BA055811DAFADA;
-extern const uint32_t g_rgctx_Enumerator_t1B4F215CF93D27F125EEB2D86A4BA40F5CAECD70;
-extern const uint32_t g_rgctx_SubsystemManager_GetSubsystems_TisT_t03C3F37066FED4FAB5173E5B63302A5F680EB241_mFD40024ACC1C4E54983F508ACD1CF19DE13766ED;
-extern const uint32_t g_rgctx_List_1_get_Item_mA68C9FE562F03A66B22F87117E851BB2885BE17B;
-extern const uint32_t g_rgctx_TBaseTypeInList_t883997456A66617A2B877652ABB884108D196296;
-extern const uint32_t g_rgctx_TDescriptor_tA0F3B4D0ACF5A5F45DF95E487332C3DEFF5DCD7B;
-extern const uint32_t g_rgctx_List_1_set_Item_mCDD61CC0FD0B1FD516A88644C2B66DDDE96D0E1C;
-extern const uint32_t g_rgctx_List_1_get_Count_mE0F699A2C26EA4352C4418947432F18E0F283EB9;
-extern const uint32_t g_rgctx_List_1_Add_mA078D3DC6B3A3D8468A52CC438A79A185DC08D32;
 static const Il2CppRGCTXDefinition s_rgctxValues[18] = 
 {
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_List_1_Clear_mBEA8639E9DD3CB2A143EB04350ACB6AAA122FB14 },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_SubsystemManager_AddSubsystemSubset_TisIntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002_TisT_tD78F82763981BEB73973B2062C1B2617E54C693B_m0FA6A1055534B064895D3ECDB05A3E9F3BBE202E },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_SubsystemManager_AddSubsystemSubset_TisSubsystemWithProvider_t1C1868CF8676F5596C1AD20A7CE69BDF7C7DE73E_TisT_tD78F82763981BEB73973B2062C1B2617E54C693B_m0C6AB902C1E25CCB21CD8AFD8219D8C1DA59BEA0 },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_SubsystemManager_AddSubsystemSubset_TisSubsystem_t2D97454A946149D608974CB6B674F5F5C613A6A4_TisT_tD78F82763981BEB73973B2062C1B2617E54C693B_mCA74243A9421F6DF806EED44937B1E3BB59744F0 },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_List_1_GetEnumerator_mD52B164EFC0D01384638E1EE71BE67EB87537899 },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_Enumerator_get_Current_m4621A84958C7991D9D4F9292F5CC1FF5DB464FB4 },
-	{ (Il2CppRGCTXDataType)2, (const Il2CppRGCTXDefinitionData *)&g_rgctx_TBaseTypeInList_t73E42101C2D9509BEF5C6BF3E5EC247DCB124649 },
-	{ (Il2CppRGCTXDataType)2, (const Il2CppRGCTXDefinitionData *)&g_rgctx_TQueryType_tB05AA4116AF5592AD12D9B1172DDE3A63A570996 },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_List_1_Add_m62BC36D148BF26E7DB8E862B6E5C8933B24EDDBB },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_Enumerator_MoveNext_m82CBBD684CE3E87068C64F0D42BA055811DAFADA },
-	{ (Il2CppRGCTXDataType)2, (const Il2CppRGCTXDefinitionData *)&g_rgctx_Enumerator_t1B4F215CF93D27F125EEB2D86A4BA40F5CAECD70 },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_SubsystemManager_GetSubsystems_TisT_t03C3F37066FED4FAB5173E5B63302A5F680EB241_mFD40024ACC1C4E54983F508ACD1CF19DE13766ED },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_List_1_get_Item_mA68C9FE562F03A66B22F87117E851BB2885BE17B },
-	{ (Il2CppRGCTXDataType)2, (const Il2CppRGCTXDefinitionData *)&g_rgctx_TBaseTypeInList_t883997456A66617A2B877652ABB884108D196296 },
-	{ (Il2CppRGCTXDataType)2, (const Il2CppRGCTXDefinitionData *)&g_rgctx_TDescriptor_tA0F3B4D0ACF5A5F45DF95E487332C3DEFF5DCD7B },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_List_1_set_Item_mCDD61CC0FD0B1FD516A88644C2B66DDDE96D0E1C },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_List_1_get_Count_mE0F699A2C26EA4352C4418947432F18E0F283EB9 },
-	{ (Il2CppRGCTXDataType)3, (const Il2CppRGCTXDefinitionData *)&g_rgctx_List_1_Add_mA078D3DC6B3A3D8468A52CC438A79A185DC08D32 },
+	{ (Il2CppRGCTXDataType)3, 8615 },
+	{ (Il2CppRGCTXDataType)3, 18292 },
+	{ (Il2CppRGCTXDataType)3, 18295 },
+	{ (Il2CppRGCTXDataType)3, 18294 },
+	{ (Il2CppRGCTXDataType)3, 8622 },
+	{ (Il2CppRGCTXDataType)3, 4009 },
+	{ (Il2CppRGCTXDataType)2, 260 },
+	{ (Il2CppRGCTXDataType)2, 513 },
+	{ (Il2CppRGCTXDataType)3, 8665 },
+	{ (Il2CppRGCTXDataType)3, 4008 },
+	{ (Il2CppRGCTXDataType)2, 1062 },
+	{ (Il2CppRGCTXDataType)3, 18298 },
+	{ (Il2CppRGCTXDataType)3, 8663 },
+	{ (Il2CppRGCTXDataType)2, 512 },
+	{ (Il2CppRGCTXDataType)2, 259 },
+	{ (Il2CppRGCTXDataType)3, 8664 },
+	{ (Il2CppRGCTXDataType)3, 8662 },
+	{ (Il2CppRGCTXDataType)3, 8661 },
 };
 extern const CustomAttributesCacheGenerator g_UnityEngine_SubsystemsModule_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_SubsystemsModule_CodeGenModule;

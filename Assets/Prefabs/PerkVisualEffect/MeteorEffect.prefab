@@ -48,7 +48,9 @@ MonoBehaviour:
   _duration: 1
   _distanceOffset: 0.5
   _goBackwards: 1
+  _destroyAfterFly: 1
   _startOffset: {x: 0, y: 2, z: 0}
   _rotateToEnemy: 1
   _applyOffsetToEndPoint: 0
   _additionalEffect: {fileID: 6897323090731170484, guid: 458b4cc9ffc4ff04cad5f43cd954fb6b, type: 3}
+  _rotationToEnemyOffset: 0

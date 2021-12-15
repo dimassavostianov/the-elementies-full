@@ -19,15 +19,17 @@ public class BattleWheel : MonoBehaviour
     private float _currentAdditionalRotation;
     private int _currentElementIndex;
     private int _elementToChangeIndex;
+    private int _turnsLeft;
+    private int _turnsRight;
     private Teams _prevTeam;
     private ElementType _choosedElement;
 
-    private Queue<int> _indexesForLeftTeam = new Queue<int>();
-    private Queue<int> _indexesForRightTeam = new Queue<int>();
-    private int _leftTeamElemtsAmount;
-    private int _rightTeamElemtsAmount;
-    private int _wheelTurnedCount;
-    private int _updateElementsAfterTurnsCount;
+    private List<ElementType> _rightTeamPossibleElements;
+    private List<ElementType> _leftTeamPossibleElements;
+    private Queue<ElementType> _rightTeamElementQueue;
+    private Queue<ElementType> _leftTeamElementQueue;
+
+    private bool _isElemntsUpdated;
 
     private void OnEnable()
     {
@@ -38,18 +40,18 @@ public class BattleWheel : MonoBehaviour
     {
         _currentElementIndex = 0;
         _prevTeam = GetRandomTeam();
+        _turnsLeft = 0;
+        _turnsRight = 0;
         SetFlagsOnStart();
-        _wheelTurnedCount = 0;
+        _isElemntsUpdated = false;
+        StartCoroutine(UpdateElementsOnStartCoroutine());
+    }
 
-        foreach (var element in _wheelElements)
-        {
-            CheckIfNeedToFillQueues();
-            int indexForLeft = _indexesForLeftTeam.Peek();
-            int indexForRight = _indexesForRightTeam.Peek();
-            element.InitializeWheelElement(indexForLeft, indexForRight, out int indexForLeftQueueu, out int indexForRightQueue);
-            element.SetAsUnused();
-            RemoveIndexesToQueues(indexForLeftQueueu, indexForRightQueue);
-        }
+    private IEnumerator UpdateElementsOnStartCoroutine()
+    {
+        yield return new WaitWhile(() => _isElemntsUpdated == true);
+
+        ChooseElementTypeForWheelElementsOnStart();
     }
 
     public void PlayRotationAnimation()
@@ -57,95 +59,24 @@ public class BattleWheel : MonoBehaviour
         StartCoroutine(PlayAnimation());
     }
 
-    public Queue<int> FillQueue(Teams team)
-    {
-        Queue<int> queue = new Queue<int>();
-        var random = new System.Random();
-
-        if (team == Teams.Left)
-        {
-            for (int i = 1; i <= _leftTeamElemtsAmount; i++)
-            {
-                int num = random.Next(_leftTeamElemtsAmount);
-                while (queue.Contains(num))
-                {
-                    num = random.Next(_leftTeamElemtsAmount);
-                }
-                queue.Enqueue(num);
-            }
-        }
-        else
-        {
-            for (int i = 1; i <= _rightTeamElemtsAmount; i++)
-            {
-                int num = random.Next(_rightTeamElemtsAmount);
-                while (queue.Contains(num))
-                {
-                    num = random.Next(_rightTeamElemtsAmount);
-                }
-                queue.Enqueue(num);
-            }
-        }
-
-        return queue;
-    }
-
     public void UpdateInWheelElements(ElementType[] leftTeam, ElementType[] rightTeam)
     {
-        _leftTeamElemtsAmount = leftTeam.Length;
-        _rightTeamElemtsAmount = rightTeam.Length;
-        _updateElementsAfterTurnsCount = _leftTeamElemtsAmount;
-        CheckIfNeedToFillQueues();
+        _rightTeamPossibleElements = new List<ElementType>();
+        _leftTeamPossibleElements = new List<ElementType>();
 
-        foreach (var element in _wheelElements)
-        {
-            element.SetPossibleElements(leftTeam, rightTeam);
-        }
-    }
+        _rightTeamElementQueue = new Queue<ElementType>();
+        _leftTeamElementQueue = new Queue<ElementType>();
 
-    private void RemoveIndexesToQueues(int leftIndex, int rightIndex)
-    {
-        if (leftIndex != -1) _indexesForLeftTeam.Dequeue();
-        if (rightIndex != -1) _indexesForRightTeam.Dequeue();
-    }
+        _rightTeamPossibleElements.AddRange(rightTeam);
+        _leftTeamPossibleElements.AddRange(leftTeam);
 
-    private void CheckIfNeedToFillQueues()
-    {
-        if (_indexesForLeftTeam.Count == 0)
-        {
-            _indexesForLeftTeam = FillQueue(Teams.Left);
-        }
-        if (_indexesForRightTeam.Count == 0)
-        {
-            _indexesForRightTeam = FillQueue(Teams.Right);
-        }
-
-        if (_indexesForLeftTeam.Count > _leftTeamElemtsAmount)
-        {
-            _indexesForLeftTeam = FillQueue(Teams.Left);
-        }
-        if (_indexesForRightTeam.Count > _rightTeamElemtsAmount)
-        {
-            _indexesForRightTeam = FillQueue(Teams.Right);
-        }
+        AddElementsToQueues();
+        AddElementsToQueues();
+        _isElemntsUpdated = true;
     }
 
     private IEnumerator PlayAnimation()
     {
-        _wheelTurnedCount++;
-        if (_wheelTurnedCount >= _updateElementsAfterTurnsCount)
-        {
-            foreach (var element in _wheelElements)
-            {
-                CheckIfNeedToFillQueues();
-                int indexForLeft = _indexesForLeftTeam.Peek();
-                int indexForRight = _indexesForRightTeam.Peek();
-                element.ChooseElementFromPossibles(indexForLeft, indexForRight, out int indexForLeftQueueu, out int indexForRightQueue);
-                RemoveIndexesToQueues(indexForLeftQueueu, indexForRightQueue);
-            }
-            _wheelTurnedCount = 0;
-        }
-
         _currentAdditionalRotation = 0;
         float startRotation = _wheelRectTransform.transform.eulerAngles.z;
 
@@ -165,8 +96,57 @@ public class BattleWheel : MonoBehaviour
             _currentElementIndex = 0;
         }
 
+        if (_wheelElements[_currentElementIndex].GetCurrentTeam() == Teams.Left) _turnsLeft++;
+        if (_wheelElements[_currentElementIndex].GetCurrentTeam() == Teams.Right) _turnsRight++;
+
         SetChoosedElement();
         UpdateOffScreenElementsFlags();
+
+        int left;
+        if (_leftTeamPossibleElements.Count == 3) left = _leftTeamPossibleElements.Count - 1;
+        else left = _leftTeamPossibleElements.Count;
+        int right;
+        if (_rightTeamPossibleElements.Count == 3) right = _rightTeamPossibleElements.Count - 1;
+        else right = _rightTeamPossibleElements.Count;
+
+        if (_turnsLeft >= left)
+        {
+            UpdateElementsForLeftTeam();
+            _turnsLeft = 0;
+        }
+        if (_turnsRight >= right)
+        {
+            UpdateElementsForRightTeam();
+            _turnsRight = 0;
+        }
+    }
+
+    private void AddElementsToQueues()
+    {
+        if (_leftTeamPossibleElements.Count == 3) _leftTeamPossibleElements.Shuffle();
+        if (_rightTeamPossibleElements.Count == 3) _rightTeamPossibleElements.Shuffle();
+
+        foreach (var element in _leftTeamPossibleElements)
+            _leftTeamElementQueue.Enqueue(element);
+
+        foreach (var element in _rightTeamPossibleElements)
+            _rightTeamElementQueue.Enqueue(element);
+    }
+
+    private void AddElementsToRightQueue()
+    {
+        if (_rightTeamPossibleElements.Count == 3) _rightTeamPossibleElements.Shuffle();
+
+        foreach (var element in _rightTeamPossibleElements)
+            _rightTeamElementQueue.Enqueue(element);
+    }
+
+    private void AddElementsToLeftQueue()
+    {
+        if (_leftTeamPossibleElements.Count == 3) _leftTeamPossibleElements.Shuffle();
+
+        foreach (var element in _leftTeamPossibleElements)
+            _leftTeamElementQueue.Enqueue(element);
     }
 
     private void SetChoosedElement()
@@ -198,6 +178,7 @@ public class BattleWheel : MonoBehaviour
             _prevTeam = team;
 
             _wheelElements[_elementToChangeIndex].SetCurrentTeam(team);
+            _wheelElements[_elementToChangeIndex].SetAsUnused();
         }    
     }
 
@@ -216,6 +197,55 @@ public class BattleWheel : MonoBehaviour
         }
     }
 
+    private void ChooseElementTypeForWheelElementsOnStart()
+    {
+        for (int i = 0; i < _wheelElements.Length; i++)
+        {
+            Teams team = _wheelElements[i].GetCurrentTeam();
+
+            if (team == Teams.Left)
+            {
+                var type = _leftTeamElementQueue.Dequeue();
+                _wheelElements[i].SetElement(type);
+            }
+            else
+            {
+                var type = _rightTeamElementQueue.Dequeue();
+                _wheelElements[i].SetElement(type);
+            }
+        }
+    }
+
+    private void UpdateElementsForRightTeam()
+    {
+        AddElementsToRightQueue();
+
+        foreach (var item in _wheelElements)
+        {
+            if (item.IsOffscreen == false) continue;
+
+            if (item.GetCurrentTeam() == Teams.Left) continue;
+
+            var element = _rightTeamElementQueue.Dequeue();
+            item.SetElement(element);
+        }
+    }
+
+    private void UpdateElementsForLeftTeam()
+    {
+        AddElementsToLeftQueue();
+
+        foreach (var item in _wheelElements)
+        {
+            if (item.IsOffscreen == false) continue;
+
+            if (item.GetCurrentTeam() == Teams.Right) continue;
+
+            var element = _leftTeamElementQueue.Dequeue();
+            item.SetElement(element);
+        }
+    }
+
     private Teams GetRandomTeam()
     {
         var random = new System.Random();
@@ -223,5 +253,22 @@ public class BattleWheel : MonoBehaviour
 
         if (a == 0) return Teams.Left;
         else return Teams.Right;
+    }
+}
+
+public static class ListExtension
+{
+    public static void Shuffle<T>(this IList<T> list)
+    {
+        System.Random random = new System.Random();
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = random.Next(n + 1);
+            T value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
     }
 }

@@ -11,6 +11,7 @@ public class SkillsDescriptionMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _descriptionText;
     [SerializeField] private TextMeshProUGUI _perkTitle;
     [SerializeField] private ShadePanel _shadePanel;
+    [SerializeField] private AnimationForDescription _anim;
 
     private void OnEnable()
     {
@@ -30,6 +31,6 @@ public class SkillsDescriptionMenu : MonoBehaviour
     {
         _shadePanel.PlayBackAnim();
         _backButton.SetActive(false);
-        gameObject.SetActive(false);
+        _anim.StartClosingAnim();
     }
 }

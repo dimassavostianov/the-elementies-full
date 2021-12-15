@@ -20,17 +20,18 @@ public class ElementsDictionary : ScriptableObject
 
     public void InitializeDictionary()
     {
-        _elementIconPairs = new Dictionary<ElementType, Sprite>();
-
-        _elementIconPairs.Add(ElementType.Dark, _darkness);
-        _elementIconPairs.Add(ElementType.Electricity, _electicity);
-        _elementIconPairs.Add(ElementType.Fire, _fire);
-        _elementIconPairs.Add(ElementType.Grass, _grass);
-        _elementIconPairs.Add(ElementType.Light, _light);
-        _elementIconPairs.Add(ElementType.Slime, _slime);
-        _elementIconPairs.Add(ElementType.Time, _time);
-        _elementIconPairs.Add(ElementType.Water, _water);
-        _elementIconPairs.Add(ElementType.Wind, _wind);
+        _elementIconPairs = new Dictionary<ElementType, Sprite>
+        {
+            { ElementType.Dark, _darkness },
+            { ElementType.Electricity, _electicity },
+            { ElementType.Fire, _fire },
+            { ElementType.Grass, _grass },
+            { ElementType.Light, _light },
+            { ElementType.Slime, _slime },
+            { ElementType.Time, _time },
+            { ElementType.Water, _water },
+            { ElementType.Wind, _wind }
+        };
     }
 
     public Sprite GetElementIconByType(ElementType type)

@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 4571478487732759688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.18, z: 1}
+  m_LocalScale: {x: 0.162, y: 0.162, z: 1}
   m_Children:
   - {fileID: 3285057317466175518}
   m_Father: {fileID: 0}
@@ -145,10 +145,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b7b656f03eb1474bab9fb67177c00c4, type: 2}
-  - {fileID: 2100000, guid: 839e7fc256cd63d449cbaea4ff0dbc8d, type: 2}
-  - {fileID: 2100000, guid: 6b7b656f03eb1474bab9fb67177c00c4, type: 2}
-  - {fileID: 2100000, guid: 839e7fc256cd63d449cbaea4ff0dbc8d, type: 2}
+  - {fileID: 2100000, guid: aafab80ae92315242ab95feb261da7e7, type: 2}
+  - {fileID: 2100000, guid: ea9b0d6297d7c254298066dd5c68c66d, type: 2}
+  - {fileID: 2100000, guid: aafab80ae92315242ab95feb261da7e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -182,8 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: e3c8882569c88eb40871a093e3775fa3, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 94d713315681b5046ae5a91cf8e3e341, type: 2}
   initialSkinName: 
+  fixPrefabOverrideViaMeshFilter: 0
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -227,11 +227,11 @@ MonoBehaviour:
   _elementType: 2
   _attackPerk1: {fileID: 11400000, guid: dbdcafac332657342bc6202556e238a3, type: 2}
   _attackPerk2: {fileID: 11400000, guid: 926771e7f5960f948ae27d43d34d10a0, type: 2}
-  _defensePerk: {fileID: 11400000, guid: 646cc364fdd7e9742b3ab85d260df477, type: 2}
-  _passivePerk: {fileID: 11400000, guid: 1e4671fd854b183448fcc1ed4322b644, type: 2}
+  _defensePerk: {fileID: 11400000, guid: 71386b4eac68ff548a821fe53c515c60, type: 2}
+  _passivePerk: {fileID: 11400000, guid: 95ecac291dc84bd409c636d987eeb41b, type: 2}
   _health: 350
   _damage: 50
-  _defense: 30
+  _defense: 0
   _power: 450
   _level: 0
 --- !u!114 &-4384964998492363366
@@ -247,10 +247,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skeletonAnim: {fileID: 7488488708423343077}
-  _meleeAttack: {fileID: 11400000, guid: 1d9ea79af9304b54fa3e5b9e78a759b5, type: 2}
-  _cast: {fileID: 11400000, guid: 1aa9d178eaf3d3c4f83051e4b1b00035, type: 2}
-  _takeDamage: {fileID: 11400000, guid: 936580573d7fc3043bd37cff001a0615, type: 2}
-  _death: {fileID: 11400000, guid: 15fc2e5a4add0314ab15fd1082ca6151, type: 2}
-  _defence: {fileID: 11400000, guid: 9369ec2913053ae4fb7e14159058bbae, type: 2}
-  _relax: {fileID: 11400000, guid: e55e043eae53fc74980536ff14ed7fd6, type: 2}
+  _meleeAttack: {fileID: 11400000, guid: 61220520910fb6f47859972e89426c66, type: 2}
+  _cast: {fileID: 11400000, guid: dfda7250d7056b14daf4267989e4bb42, type: 2}
+  _takeDamage: {fileID: 11400000, guid: 78122bcc3f6bdf1489ef66fa81dcec2f, type: 2}
+  _takeDamageFromBlade: {fileID: 11400000, guid: 9e1eca72a40d7914cb3aaf923f29dabc, type: 2}
+  _takeDamageSpike: {fileID: 11400000, guid: b14f6f319eb650a4d9c47fee0f7ac5c7, type: 2}
+  _takeDamageTornado: {fileID: 11400000, guid: 48e84fdb39d077d42aecd7b76eb4d267, type: 2}
+  _death: {fileID: 11400000, guid: f4bb702598624ec49b068872ac48b728, type: 2}
+  _relax: {fileID: 11400000, guid: 5185a3ffb2d1a7044adb682f1e1fcd89, type: 2}
+  _winPose: {fileID: 11400000, guid: 892a79524f67b5e4d910c3b3a6c95a99, type: 2}
   minDistanceForMeleeAtack: 0.1

@@ -251,8 +251,10 @@ public class LeftTeamTurnState : BattleAbstractState
         if (actveChar.gameObject.activeInHierarchy == true)
         {
             int power = actveChar.Power;
-            int count = 0;
-            if (power < actveChar.AttackPerk1.ApplyingEnergy && power < actveChar.AttackPerk2.ApplyingEnergy)
+            if (power < actveChar.AttackPerk1.ApplyingEnergy 
+                && power < actveChar.AttackPerk2.ApplyingEnergy
+                && power < actveChar.DefensePerk.ApplyingEnergy
+                && power < actveChar.PassivePerk.ApplyingEnergy)
             {
                 _leftTeam.MakeDamagePlayer();
             }
@@ -431,14 +433,10 @@ public class BattleEndState : BattleAbstractState
     {
         if (_leftTeam.CheckIfTeamDefeated() == true)
         {
-            _rightTeam.DestroyCharactersOnDefeat();
-            _leftTeam.DestroyCharactersOnDefeat();
             _battleUIController.ShowLooseScren(_rightTeam.GetCharactersForWinScreen());
         }
         else if (_rightTeam.CheckIfTeamDefeated() == true)
         {
-            _rightTeam.DestroyCharactersOnDefeat();
-            _leftTeam.DestroyCharactersOnDefeat();
             _battleUIController.ShowWinScreen(_leftTeam.GetCharactersForWinScreen());
         }
     }

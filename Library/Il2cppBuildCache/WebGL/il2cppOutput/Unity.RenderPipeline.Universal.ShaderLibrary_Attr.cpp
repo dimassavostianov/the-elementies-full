@@ -48,51 +48,6 @@ public:
 };
 
 
-// System.String
-struct String_t  : public RuntimeObject
-{
-public:
-	// System.Int32 System.String::m_stringLength
-	int32_t ___m_stringLength_0;
-	// System.Char System.String::m_firstChar
-	Il2CppChar ___m_firstChar_1;
-
-public:
-	inline static int32_t get_offset_of_m_stringLength_0() { return static_cast<int32_t>(offsetof(String_t, ___m_stringLength_0)); }
-	inline int32_t get_m_stringLength_0() const { return ___m_stringLength_0; }
-	inline int32_t* get_address_of_m_stringLength_0() { return &___m_stringLength_0; }
-	inline void set_m_stringLength_0(int32_t value)
-	{
-		___m_stringLength_0 = value;
-	}
-
-	inline static int32_t get_offset_of_m_firstChar_1() { return static_cast<int32_t>(offsetof(String_t, ___m_firstChar_1)); }
-	inline Il2CppChar get_m_firstChar_1() const { return ___m_firstChar_1; }
-	inline Il2CppChar* get_address_of_m_firstChar_1() { return &___m_firstChar_1; }
-	inline void set_m_firstChar_1(Il2CppChar value)
-	{
-		___m_firstChar_1 = value;
-	}
-};
-
-struct String_t_StaticFields
-{
-public:
-	// System.String System.String::Empty
-	String_t* ___Empty_5;
-
-public:
-	inline static int32_t get_offset_of_Empty_5() { return static_cast<int32_t>(offsetof(String_t_StaticFields, ___Empty_5)); }
-	inline String_t* get_Empty_5() const { return ___Empty_5; }
-	inline String_t** get_address_of_Empty_5() { return &___Empty_5; }
-	inline void set_Empty_5(String_t* value)
-	{
-		___Empty_5 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___Empty_5), (void*)value);
-	}
-};
-
-
 // System.ValueType
 struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
 {
@@ -318,8 +273,6 @@ public:
 	bool ___generateCBuffer_7;
 	// System.Int32 UnityEngine.Rendering.GenerateHLSL::constantRegister
 	int32_t ___constantRegister_8;
-	// System.String UnityEngine.Rendering.GenerateHLSL::sourcePath
-	String_t* ___sourcePath_9;
 
 public:
 	inline static int32_t get_offset_of_packingRules_0() { return static_cast<int32_t>(offsetof(GenerateHLSL_t658963CA2A46E3C1A078AE73C503DD700839184C, ___packingRules_0)); }
@@ -393,15 +346,6 @@ public:
 	{
 		___constantRegister_8 = value;
 	}
-
-	inline static int32_t get_offset_of_sourcePath_9() { return static_cast<int32_t>(offsetof(GenerateHLSL_t658963CA2A46E3C1A078AE73C503DD700839184C, ___sourcePath_9)); }
-	inline String_t* get_sourcePath_9() const { return ___sourcePath_9; }
-	inline String_t** get_address_of_sourcePath_9() { return &___sourcePath_9; }
-	inline void set_sourcePath_9(String_t* value)
-	{
-		___sourcePath_9 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___sourcePath_9), (void*)value);
-	}
 };
 
 #ifdef __clang__
@@ -418,8 +362,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeCompatibilityAttribute__ctor_m551
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RuntimeCompatibilityAttribute_set_WrapNonExceptionThrows_m8562196F90F3EBCEC23B5708EE0332842883C490_inline (RuntimeCompatibilityAttribute_tFF99AB2963098F9CBCD47A20D9FD3D51C17C1C80 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void System.Diagnostics.DebuggableAttribute::.ctor(System.Diagnostics.DebuggableAttribute/DebuggingModes)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550 (DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B * __this, int32_t ___modes0, const RuntimeMethod* method);
-// System.Void UnityEngine.Rendering.GenerateHLSL::.ctor(UnityEngine.Rendering.PackingRules,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GenerateHLSL__ctor_mC412BE0DD6B849CE00518AFB44905F51F31910C0 (GenerateHLSL_t658963CA2A46E3C1A078AE73C503DD700839184C * __this, int32_t ___rules0, bool ___needAccessors1, bool ___needSetters2, bool ___needParamDebug3, int32_t ___paramDefinesStart4, bool ___omitStructDeclaration5, bool ___containsPackedFields6, bool ___generateCBuffer7, int32_t ___constantRegister8, String_t* ___sourcePath9, const RuntimeMethod* method);
+// System.Void UnityEngine.Rendering.GenerateHLSL::.ctor(UnityEngine.Rendering.PackingRules,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GenerateHLSL__ctor_mAF98A49C06C74453B1482D903ED21D0661AA01E1 (GenerateHLSL_t658963CA2A46E3C1A078AE73C503DD700839184C * __this, int32_t ___rules0, bool ___needAccessors1, bool ___needSetters2, bool ___needParamDebug3, int32_t ___paramDefinesStart4, bool ___omitStructDeclaration5, bool ___containsPackedFields6, bool ___generateCBuffer7, int32_t ___constantRegister8, const RuntimeMethod* method);
 static void Unity_RenderPipeline_Universal_ShaderLibrary_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
 {
 	{
@@ -440,13 +384,21 @@ static void LightData_t8C139E4D07ED1FF86DF198773F7F41736AE9B135_CustomAttributes
 {
 	{
 		GenerateHLSL_t658963CA2A46E3C1A078AE73C503DD700839184C * tmp = (GenerateHLSL_t658963CA2A46E3C1A078AE73C503DD700839184C *)cache->attributes[0];
-		GenerateHLSL__ctor_mC412BE0DD6B849CE00518AFB44905F51F31910C0(tmp, 0LL, false, false, false, 1LL, false, false, false, -1LL, il2cpp_codegen_string_new_wrapper("\x44\x3A\x5C\x55\x6E\x69\x74\x79\x20\x50\x72\x6F\x6A\x65\x63\x74\x73\x5C\x54\x68\x65\x20\x45\x6C\x65\x6D\x65\x6E\x74\x69\x65\x73\x5C\x4C\x69\x62\x72\x61\x72\x79\x5C\x50\x61\x63\x6B\x61\x67\x65\x43\x61\x63\x68\x65\x5C\x63\x6F\x6D\x2E\x75\x6E\x69\x74\x79\x2E\x72\x65\x6E\x64\x65\x72\x2D\x70\x69\x70\x65\x6C\x69\x6E\x65\x73\x2E\x75\x6E\x69\x76\x65\x72\x73\x61\x6C\x40\x31\x31\x2E\x30\x2E\x30\x5C\x53\x68\x61\x64\x65\x72\x4C\x69\x62\x72\x61\x72\x79\x5C\x53\x68\x61\x64\x65\x72\x54\x79\x70\x65\x73\x2E\x63\x73"), NULL);
+		GenerateHLSL__ctor_mAF98A49C06C74453B1482D903ED21D0661AA01E1(tmp, 0LL, false, false, false, 1LL, false, false, false, -1LL, NULL);
+	}
+}
+static void ShadowData_t5ACDE96DE7C04AEE2981172CB8996A5E66ED3701_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
+{
+	{
+		GenerateHLSL_t658963CA2A46E3C1A078AE73C503DD700839184C * tmp = (GenerateHLSL_t658963CA2A46E3C1A078AE73C503DD700839184C *)cache->attributes[0];
+		GenerateHLSL__ctor_mAF98A49C06C74453B1482D903ED21D0661AA01E1(tmp, 0LL, false, false, false, 1LL, false, false, false, -1LL, NULL);
 	}
 }
 IL2CPP_EXTERN_C const CustomAttributesCacheGenerator g_Unity_RenderPipeline_Universal_ShaderLibrary_AttributeGenerators[];
-const CustomAttributesCacheGenerator g_Unity_RenderPipeline_Universal_ShaderLibrary_AttributeGenerators[2] = 
+const CustomAttributesCacheGenerator g_Unity_RenderPipeline_Universal_ShaderLibrary_AttributeGenerators[3] = 
 {
 	LightData_t8C139E4D07ED1FF86DF198773F7F41736AE9B135_CustomAttributesCacheGenerator,
+	ShadowData_t5ACDE96DE7C04AEE2981172CB8996A5E66ED3701_CustomAttributesCacheGenerator,
 	Unity_RenderPipeline_Universal_ShaderLibrary_CustomAttributesCacheGenerator,
 };
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RuntimeCompatibilityAttribute_set_WrapNonExceptionThrows_m8562196F90F3EBCEC23B5708EE0332842883C490_inline (RuntimeCompatibilityAttribute_tFF99AB2963098F9CBCD47A20D9FD3D51C17C1C80 * __this, bool ___value0, const RuntimeMethod* method)

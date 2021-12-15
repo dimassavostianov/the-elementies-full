@@ -13,11 +13,15 @@ public class StatsMenuUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _energyText;
     [SerializeField] private TextMeshProUGUI _characterTypeText;
     [SerializeField] private SkillsDescriptionMenu _descriptionMenu;
+    [SerializeField] private AudioSource _buttonSound;
 
     private void OnEnable()
     {
         foreach (var button in _skillButtons)
+        {
             button.SkillButtonClicked += ShowDescription;
+            button.SetAudioSource(_buttonSound);
+        }
     }
 
     public void UpdateCharacterInfo(Character character)

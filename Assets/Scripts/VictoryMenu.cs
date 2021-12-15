@@ -16,6 +16,8 @@ public class VictoryMenu : MonoBehaviour
         {
             var charObj = Instantiate(characters[i].gameObject);
             charObj.transform.position = new Vector3(_positionsForCharacters[i].position.x, _positionsForCharacters[i].position.y, 0);
+            var characterOnScene = charObj.GetComponent<Character>();
+            characterOnScene.InitForWin();
             _characters[i] = charObj;
         }
 
@@ -27,6 +29,8 @@ public class VictoryMenu : MonoBehaviour
         for (int i = 0; i < characters.Length; i++)
         {
             var charObj = Instantiate(characters[i].gameObject);
+            var characterOnScene = charObj.GetComponent<Character>();
+            characterOnScene.InitForWin();
             charObj.transform.position = new Vector3(_positionsForCharacters[i].position.x, _positionsForCharacters[i].position.y, 0);
             _characters[i] = charObj;
         }

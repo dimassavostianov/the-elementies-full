@@ -93,13 +93,15 @@ GameObject:
   - component: {fileID: 2443888057925423136}
   - component: {fileID: 2443888057925423137}
   - component: {fileID: 2443888057925423142}
+  - component: {fileID: 6960424407546805233}
+  - component: {fileID: 183055853}
   m_Layer: 0
   m_Name: Charaacter(Test) 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2443888057925423136
 Transform:
   m_ObjectHideFlags: 0
@@ -109,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 2443888057925423138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 215.99998, y: 215.99998, z: 108}
   m_Children:
   - {fileID: 2443888057878379627}
   - {fileID: 2443888058129023185}
@@ -180,21 +182,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bcbbe27312afea4e8f4672cd7da6faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationController: {fileID: 0}
-  _hpStaUIObj: {fileID: 0}
+  _animationController: {fileID: 5998506580338806390, guid: e0bfb8a994157ee4fa1e3cedc4d74ede, type: 3}
+  _hpStaUIObj: {fileID: 2179525002561635958, guid: 0dca9095321ebf748abd880aeaa4d57a, type: 3}
   _elemetnsIcons: {fileID: 11400000, guid: 2bef2a816d7787d428c7802fee4c6989, type: 2}
-  _posForHpUI: {fileID: 0}
+  _posForHpUI: {fileID: 1901868436919472898, guid: e0bfb8a994157ee4fa1e3cedc4d74ede, type: 3}
   _rarity: 0
   _elementType: 8
   _attackPerk1: {fileID: 11400000, guid: b5822b16c5a8eb043bb9eb38d569ea4e, type: 2}
   _attackPerk2: {fileID: 11400000, guid: 7a268a309630f4347a6f0fdae825cf7e, type: 2}
   _defensePerk: {fileID: 11400000, guid: 646cc364fdd7e9742b3ab85d260df477, type: 2}
-  _passivePerk: {fileID: 11400000, guid: 1e4671fd854b183448fcc1ed4322b644, type: 2}
+  _passivePerk: {fileID: 11400000, guid: 465be78569fde464aaa38547d066bab1, type: 2}
   _health: 350
   _damage: 50
-  _defense: 30
+  _defense: 0
   _power: 450
   _level: 0
+--- !u!95 &6960424407546805233
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2443888057925423138}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88a763794ec6eda4e8f0a35433088ccd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &183055853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2443888057925423138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd80c28bfc9f04eb679ca15f42803f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeactivateAfterAnim: 0
+  _animator: {fileID: 6960424407546805233}
 --- !u!1 &2443888058129023186
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,6 +926,10 @@ MonoBehaviour:
   _hpText: {fileID: 2318318071008264644}
   _energyText: {fileID: 2890750742876376847}
   _elementSprite: {fileID: 6623517390244084635}
+  _hpAnim: {fileID: 0}
+  _energyAnim: {fileID: 0}
+  _hpAnimText: {fileID: 0}
+  _energyAnimText: {fileID: 0}
   _speed: 1
 --- !u!1 &7882320023085094315
 GameObject:

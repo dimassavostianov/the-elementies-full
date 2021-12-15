@@ -1,12 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
 public enum PerkType
 {
-    AttackOne,
-    AttackAll,
+    Attack,
     Defense,
     Passive
 }
@@ -17,6 +15,13 @@ public enum AttackType
     Distance,
 }
 
+public enum DamageType
+{
+    One,
+    All,
+    None
+}
+
 public class Perk
 {
     public string Name => _name;
@@ -24,10 +29,12 @@ public class Perk
     public int ApplyingDefense => _applyingDefense;
     public int ApplyingEnergy => _applyingEnergy;
     public int Level => _level;
+    public int Duration => _perkDuration;
     public bool IsTest => _isTest;
 
     public readonly PerkType Type;
     public readonly AttackType AttackType;
+    public readonly DamageType DamageType;
 
     public readonly Sprite Icon;
     public readonly PerkVisualEffect VisualEffect;
@@ -38,10 +45,14 @@ public class Perk
     [SerializeField] private int _applyingDefense;
     [SerializeField] private int _applyingEnergy;
     [SerializeField] private int _level;
+    private int _perkDuration;
     private bool _isTest;
 
-    public Perk(PerkType type,
+    public Perk
+        (
+        PerkType type,
         AttackType attackType,
+        DamageType damageType,
         Sprite icon,
         PerkVisualEffect visualEffect,
         PerkDiscription perkDiscription,
@@ -50,16 +61,19 @@ public class Perk
         int defense,
         int energy, 
         int level,
+        int duration,
         bool isTest)
         : this(damage, defense, energy)
     {
         Type = type;
         AttackType = attackType;
+        DamageType = damageType;
         Icon = icon;
         VisualEffect = visualEffect;
         Discription = perkDiscription;
         _level = level;
         _name = name;
+        _perkDuration = duration;
         _isTest = isTest;
     }
 
@@ -73,6 +87,11 @@ public class Perk
 
         if (energy >= 0) _applyingEnergy = energy;
         else _applyingEnergy = 0;
+    }
+
+    public void DecreaseDuration()
+    {
+        _perkDuration--;
     }
 
     public PerkVisualEffect ActivateVisualEffect(Vector3 startPos, Vector3 enemyPos)

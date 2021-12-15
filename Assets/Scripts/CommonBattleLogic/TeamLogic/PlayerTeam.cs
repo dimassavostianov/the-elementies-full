@@ -36,7 +36,6 @@ public class PlayerTeam : AbstractTeam
 
     public override void MakeDamagePlayer()
     {
-        _currentActiveCharacter.SetAsUnChoosed();
         StartCoroutine(SimpleMeleeAttack(_currentActiveCharacter.Damage));
         ActivateTeamEndedEvent();
     }
@@ -45,53 +44,27 @@ public class PlayerTeam : AbstractTeam
     {
         PerkType perkType = perk.Type;
 
-        if (perkType == PerkType.AttackOne)
+        if (perkType == PerkType.Attack)
         {
-            _currentActiveCharacter.SetActiveAttackPerk(perk);
-            int damage = _currentActiveCharacter.CalculateDamage();
-            if (perk.VisualEffect == null)
+            if (perk.AttackType == AttackType.Meele)
             {
-                _enemyTeam.DamageCharacter(damage);
-                ActivateTeamEndedEvent();
-            }
-            else
-            {
-                if (perk.AttackType == AttackType.Meele)
-                {
-                    StartCoroutine(EndTurnAfterMeleeAtack(damage, perk));
-                }
-                else if (perk.AttackType == AttackType.Distance)
-                {
-                    StartCoroutine(EndTurnAfterCastAndEffectEnd(damage, false, perk));
-                }
-            }
-        }
-        else if (perkType == PerkType.AttackAll)
-        {
-            _currentActiveCharacter.SetActiveAttackPerk(perk);
-            int damage = _currentActiveCharacter.CalculateDamage();
-            if (perk.VisualEffect == null)
-            {
-                _enemyTeam.DamageAllCharacters(damage);
-                ActivateTeamEndedEvent();
+                StartCoroutine(EndTurnAfterMeleeAtack(perk));
             }
             else if (perk.AttackType == AttackType.Distance)
             {
-                StartCoroutine(EndTurnAfterCastAndEffectEnd(damage, true, perk));
+                StartCoroutine(EndTurnAfterCastAndEffectEnd(perk));
             }
         }
         else if (perkType == PerkType.Defense)
         {
-            _currentActiveCharacter.SetActiveDefensePerk(perk);
-            ActivateTeamEndedEvent();
+            StartCoroutine(EndTurnAfterCast(perk));
         }
         else if (perkType == PerkType.Passive)
         {
-            _currentActiveCharacter.SetPassivePerk(perk);
-            ActivateTeamEndedEvent();
+            StartCoroutine(EndTurnAfterCast(perk));
         }
 
-        _currentActiveCharacter.SetAsUnChoosed();
+        _currentActiveCharacter.PerkBeenUsed(perk);
     }
 
     private IEnumerator SimpleMeleeAttack(int damage)
@@ -103,12 +76,13 @@ public class PlayerTeam : AbstractTeam
 
         yield return new WaitUntil(() => StaticInfo.HalfMeleeAttackComplete == true);
 
-        _enemyTeam.DamageCharacter(damage);
+        _enemyTeam.DamageCharacter(_currentActiveCharacter.CalculateDamage(damage), "none");
+        Attack();
 
         ActivateTeamEndedEvent();
     }
 
-    private IEnumerator EndTurnAfterMeleeAtack(int damage, Perk perk)
+    private IEnumerator EndTurnAfterMeleeAtack(Perk perk)
     {
         Vector3 startPos = GetCurrentActiveCharacter().gameObject.transform.position;
         Vector3 enemyPos = _enemyTeam.GetCharacterUnderAttack().gameObject.transform.position;
@@ -121,12 +95,13 @@ public class PlayerTeam : AbstractTeam
 
         yield return new WaitUntil(() => StaticInfo.PerkEffectFinished == true);
 
-        _enemyTeam.DamageCharacter(damage);
+        _perkSysytem.UsePerk(perk, _enemyTeam, _currentActiveCharacter, this);
+        Attack();
 
         ActivateTeamEndedEvent();
     }
 
-    private IEnumerator EndTurnAfterCastAndEffectEnd(int damage, bool damageAll, Perk perk)
+    private IEnumerator EndTurnAfterCastAndEffectEnd(Perk perk)
     {
         Vector3 startPos = GetCurrentActiveCharacter().gameObject.transform.position;
         Vector3 enemyPos = _enemyTeam.GetCharacterUnderAttack().gameObject.transform.position;
@@ -139,8 +114,30 @@ public class PlayerTeam : AbstractTeam
 
         yield return new WaitUntil(() => StaticInfo.PerkEffectFinished == true);
 
-        if (damageAll == true) _enemyTeam.DamageAllCharacters(damage);
-        else _enemyTeam.DamageCharacter(damage);
+        _perkSysytem.UsePerk(perk, _enemyTeam, _currentActiveCharacter, this);
+        Attack();
+
+        ActivateTeamEndedEvent();
+    }
+
+    private IEnumerator EndTurnAfterCast(Perk perk)
+    {
+        Vector3 startPos = GetCurrentActiveCharacter().gameObject.transform.position;
+        Vector3 enemyPos = _enemyTeam.GetCharacterUnderAttack().gameObject.transform.position;
+
+        _currentActiveCharacter.PlayCastAnim();
+
+        yield return new WaitUntil(() => StaticInfo.CastComplete == true);
+
+        _perkSysytem.UsePerk(perk, _enemyTeam, _currentActiveCharacter, this);
+
+        if (perk.VisualEffect != null && perk != null)
+        {
+            var visualEffect = perk.ActivateVisualEffect(startPos, enemyPos);
+
+            if (perk.Type == PerkType.Defense) _perkSysytem.SetVisualEffectForDefensePerk(perk, visualEffect as DefensePerkEffect,
+               _currentActiveCharacter);
+        }
 
         ActivateTeamEndedEvent();
     }

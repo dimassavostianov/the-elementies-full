@@ -5,10 +5,12 @@ using UnityEngine;
 public abstract class PerkVisualEffect : MonoBehaviour
 {
     [SerializeField] protected GameObject _effectPrefab;
+    [SerializeField] protected Transform _effectsHolder;
     [SerializeField] protected Vector2 _startPositionForDistanceAttack;
     [SerializeField] protected float _duration;
     [SerializeField] protected float _distanceOffset;
     [SerializeField] protected bool _goBackwards;
+    [SerializeField] protected bool _destroyAfterFly;
 
     private float _passedDistance;
 
@@ -28,7 +30,7 @@ public abstract class PerkVisualEffect : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        Destroy(obj);
+        if (_destroyAfterFly == true) Destroy(obj);
 
         StaticInfo.PerkEffectFinished = true;
         StartCoroutine(StartSelfDestroy());

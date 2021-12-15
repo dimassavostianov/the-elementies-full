@@ -18,7 +18,6 @@ public class Character : MonoBehaviour
     private CharacterState _currentState;
     private Perk _activeDefensePerk;
     private Perk _activePassivePerk;
-    private Perk _activeAttackPerk;
 
     #region Properties
     public CharacterState CurrentState => _currentState;
@@ -28,6 +27,8 @@ public class Character : MonoBehaviour
     public Perk AttackPerk2 => PerkFactory.CreatePerkFormTemplate(_attackPerk2);
     public Perk DefensePerk => PerkFactory.CreatePerkFormTemplate(_defensePerk);
     public Perk PassivePerk => PerkFactory.CreatePerkFormTemplate(_passivePerk);
+    public Perk ActiveDefensePerk => _activeDefensePerk;
+    public Perk ActivePassivePerk => _activePassivePerk;
     public int Health => _health;
     public int Damage => _damage;
     public int Defense => _defense;
@@ -78,24 +79,20 @@ public class Character : MonoBehaviour
         _level = level;
     }
 
-
-    private void Start()
+    public void InitForBattle()
     {
-        try
-        {
-            SetAsUnChoosed();
-            _currentState = CharacterState.Alive;
-            var hpObj = Instantiate(_hpStaUIObj);
-            hpObj.transform.position = _posForHpUI.position;
-            _hpStored = hpObj;
-            _hpStaUI = hpObj.GetComponent<CharacterHPStaUI>();
-            _hpStaUI.SetPRoperties(_health, _power, _elemetnsIcons.GetElementIconByType(_elementType));
-            _animationController.StartRelaxAnimation();
-        }
-        catch (Exception ex)
-        {
-            
-        }
+        _currentState = CharacterState.Alive;
+        var hpObj = Instantiate(_hpStaUIObj);
+        hpObj.transform.position = _posForHpUI.position;
+        _hpStored = hpObj;
+        _hpStaUI = hpObj.GetComponent<CharacterHPStaUI>();
+        _hpStaUI.SetPRoperties(_health, _power, _elemetnsIcons.GetElementIconByType(_elementType));
+        _animationController.StartRelaxAnimation();
+    }
+
+    public void InitForWin()
+    {
+        _animationController.StartWinAnimation();
     }
 
     public void XFlip()
@@ -103,42 +100,37 @@ public class Character : MonoBehaviour
         _animationController.MakeXFlip();
     }
 
-    public void SetAsChoosed()
+    public int CalculateDamage(int damage)
     {
-    }
-
-    public void SetAsUnChoosed()
-    {
-    }
-
-    public int CalculateDamage()
-    {
-        int damage = 0;
-
-        if (_activeAttackPerk != null) damage += _activeAttackPerk.ApplyingDamage;
-
-        if (_activePassivePerk != null) damage += _activePassivePerk.ApplyingDamage;
+        if (_activePassivePerk != null)
+        {
+            damage *= Mathf.Clamp(_activePassivePerk.ApplyingDamage, 1, 10);
+        }
 
         return damage;
     }
 
-    public void TakeDamage(int value)
+    public void TakeDamage(int value, string perkName)
     {
         int additionDefense = 0;
 
-        if (_activeDefensePerk != null) additionDefense += _activeDefensePerk.ApplyingDefense;
+        if (_activeDefensePerk != null)
+        {
+            additionDefense += _activeDefensePerk.ApplyingDefense;
+        }
 
-        if (_activePassivePerk != null) additionDefense += _activePassivePerk.ApplyingDefense;
+        if (_activePassivePerk != null)
+        {
+            additionDefense += _activePassivePerk.ApplyingDefense;
+        }
 
         value = (int)(value * (1 - ((float)(_defense + additionDefense) / 100)));
 
         _health -= value;
 
-        _activeDefensePerk = null;
-
         _hpStaUI.UpdateHealth(Health);
 
-        _animationController.StartTakingDamageAnimation();
+        _animationController.StartTakingDamageAnimation(perkName);
 
         if (_health <= 0)
         {
@@ -156,36 +148,30 @@ public class Character : MonoBehaviour
         _animationController.StartCastAnimation();
     }
 
-    public void SetActiveDefensePerk(Perk perk)
+    public void PerkBeenUsed(Perk perk)
     {
-        if (_activeDefensePerk == null)
-        {
-            _activeDefensePerk = perk;
-            _power -= perk.ApplyingEnergy;
-            _hpStaUI.UpdateEnergy(Power);
-        }
-    }
-
-    public void SetActiveAttackPerk(Perk perk)
-    {
-        _activeAttackPerk = perk;
         _power -= perk.ApplyingEnergy;
         _hpStaUI.UpdateEnergy(Power);
     }
 
-    public void SetPassivePerk(Perk perk)
+    public void SetActiveDefensePerk(Perk perk)
     {
-        if (_activePassivePerk == null)
-        {
-            _activePassivePerk = perk;
-            _power -= perk.ApplyingEnergy;
-            _hpStaUI.UpdateEnergy(Power);
-        }
+        _activeDefensePerk = perk;
     }
 
-    public void ResetActiveAttackPerks()
+    public void SetActivePassivePerk(Perk perk)
     {
-        _activeAttackPerk = null;
+        _activePassivePerk = perk;
+    }
+
+    public void ResetActiveDefensePerk()
+    {
+        _activeDefensePerk = null;
+    }
+
+    public void ResetActivePassivePerk()
+    {
+        _activePassivePerk = null;
     }
 
     private void SetAsDead()
@@ -197,11 +183,6 @@ public class Character : MonoBehaviour
 
     private void OnDestroy()
     {
-        try
-        {
-            Destroy(_hpStored);
-        }
-        catch (Exception ex)
-        { }
+        if (_hpStored != null) Destroy(_hpStored);
     }
 }

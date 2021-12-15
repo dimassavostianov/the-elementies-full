@@ -20,6 +20,19 @@ public class SkillButtonInBattle : AbstractSkillButton
     {
         SetPerk(perk);
 
+        if (perk.IsTest == true)
+        {
+            _testSkill.SetAsTest();
+            _skillUnavailable.SetAvailable();
+            _isInteractable = false;
+            return;
+        }
+        else
+        {
+            _testSkill.SetAsActive();
+            _isInteractable = true;
+        }
+
         if (canUsePerk == false)
         {
             _skillUnavailable.SetUnavailable();
@@ -28,18 +41,6 @@ public class SkillButtonInBattle : AbstractSkillButton
         else
         {
             _skillUnavailable.SetAvailable();
-            _isInteractable = true;
-        }
-
-        if (perk.IsTest == true)
-        {
-            _testSkill.SetAsTest();
-            _skillUnavailable.SetAvailable();
-            _isInteractable = false;
-        }
-        else
-        {
-            _testSkill.SetAsActive();
             _isInteractable = true;
         }
     }

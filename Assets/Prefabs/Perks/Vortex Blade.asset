@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c71922865a9b0a4b881202c90489b11, type: 3}
   m_Name: Vortex Blade
   m_EditorClassIdentifier: 
-  PerkType: 1
+  PerkType: 0
   AttackType: 1
+  DamageType: 1
   Icon: {fileID: 21300000, guid: df8d6c90e8787164490e4ae97e5b5fc2, type: 3}
   VisualEffect: {fileID: 7788330501442090164, guid: 84f2739176b6e3e4db7876fe4835aba2, type: 3}
   Discription: {fileID: 11400000, guid: 4dbdec60b8af9ac4b98b96a7c5d56521, type: 2}
@@ -22,3 +23,5 @@ MonoBehaviour:
   ApplyingDefense: 0
   ApplyingEnergy: 100
   Level: 0
+  Duration: 0
+  IsTest: 0

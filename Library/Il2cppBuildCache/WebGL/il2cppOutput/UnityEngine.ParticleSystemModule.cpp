@@ -1192,9 +1192,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_lifetime_mCE97F9D17D1E660DB
 }
 IL2CPP_EXTERN_C  void Particle_set_lifetime_mCE97F9D17D1E660DB9D9F3244150CB6624A74DC3_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
+	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
 	Particle_set_lifetime_mCE97F9D17D1E660DB9D9F3244150CB6624A74DC3(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.ParticleSystem/Particle::set_position(UnityEngine.Vector3)
@@ -1208,9 +1207,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_position_mB749E41CD3C4C6DF5
 }
 IL2CPP_EXTERN_C  void Particle_set_position_mB749E41CD3C4C6DF501C0D68B6211CF7E2217FC2_AdjustorThunk (RuntimeObject * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___value0, const RuntimeMethod* method)
 {
-	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
+	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
 	Particle_set_position_mB749E41CD3C4C6DF501C0D68B6211CF7E2217FC2(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.ParticleSystem/Particle::set_velocity(UnityEngine.Vector3)
@@ -1224,9 +1222,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_velocity_m4894BD6A75E7A1FCD
 }
 IL2CPP_EXTERN_C  void Particle_set_velocity_m4894BD6A75E7A1FCD433927F93396AA29A59709B_AdjustorThunk (RuntimeObject * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___value0, const RuntimeMethod* method)
 {
-	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
+	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
 	Particle_set_velocity_m4894BD6A75E7A1FCD433927F93396AA29A59709B(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.ParticleSystem/Particle::set_remainingLifetime(System.Single)
@@ -1240,9 +1237,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_remainingLifetime_mE521DF93
 }
 IL2CPP_EXTERN_C  void Particle_set_remainingLifetime_mE521DF9387892C00B3F21D4F76F3A55E77AFC6BE_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
+	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
 	Particle_set_remainingLifetime_mE521DF9387892C00B3F21D4F76F3A55E77AFC6BE(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.ParticleSystem/Particle::set_startLifetime(System.Single)
@@ -1256,9 +1252,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_startLifetime_m7AC09262BBFE
 }
 IL2CPP_EXTERN_C  void Particle_set_startLifetime_m7AC09262BBFE8818EA6B61BDB62264184CD27A82_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
+	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
 	Particle_set_startLifetime_m7AC09262BBFE8818EA6B61BDB62264184CD27A82(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.ParticleSystem/Particle::set_startColor(UnityEngine.Color32)
@@ -1272,9 +1267,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_startColor_mA7B0363E82B7A7C
 }
 IL2CPP_EXTERN_C  void Particle_set_startColor_mA7B0363E82B7A7CBB1C83F8C5D49FB7B7AF75554_AdjustorThunk (RuntimeObject * __this, Color32_tDB54A78627878A7D2DE42BB028D64306A18E858D  ___value0, const RuntimeMethod* method)
 {
-	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
+	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
 	Particle_set_startColor_mA7B0363E82B7A7CBB1C83F8C5D49FB7B7AF75554(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.ParticleSystem/Particle::set_randomSeed(System.UInt32)
@@ -1288,9 +1282,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_randomSeed_m8FD7A4DB7F8E7EB
 }
 IL2CPP_EXTERN_C  void Particle_set_randomSeed_m8FD7A4DB7F8E7EBDEF2C51A28197F8D9D7CB6E04_AdjustorThunk (RuntimeObject * __this, uint32_t ___value0, const RuntimeMethod* method)
 {
-	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
+	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
 	Particle_set_randomSeed_m8FD7A4DB7F8E7EBDEF2C51A28197F8D9D7CB6E04(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.ParticleSystem/Particle::set_startSize(System.Single)
@@ -1309,9 +1302,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_startSize_m7CDEE5B620B3D26B
 }
 IL2CPP_EXTERN_C  void Particle_set_startSize_m7CDEE5B620B3D26B4CC5C1DA7C6E24ACCCF64466_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
 {
-	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
+	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
 	Particle_set_startSize_m7CDEE5B620B3D26B4CC5C1DA7C6E24ACCCF64466(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.ParticleSystem/Particle::set_rotation3D(UnityEngine.Vector3)
@@ -1329,9 +1321,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_rotation3D_m0F402760524A813
 }
 IL2CPP_EXTERN_C  void Particle_set_rotation3D_m0F402760524A81307FA4940751751C44DF2F77D0_AdjustorThunk (RuntimeObject * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___value0, const RuntimeMethod* method)
 {
-	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
+	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
 	Particle_set_rotation3D_m0F402760524A81307FA4940751751C44DF2F77D0(_thisAdjusted, ___value0, method);
 }
 // System.Void UnityEngine.ParticleSystem/Particle::set_angularVelocity3D(UnityEngine.Vector3)
@@ -1349,9 +1340,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_angularVelocity3D_mE9A9544D
 }
 IL2CPP_EXTERN_C  void Particle_set_angularVelocity3D_mE9A9544DF33CD0CCF4F1CA14994A2C436E4DF1F8_AdjustorThunk (RuntimeObject * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___value0, const RuntimeMethod* method)
 {
-	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted;
 	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
+	Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * _thisAdjusted = reinterpret_cast<Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 *>(__this + _offset);
 	Particle_set_angularVelocity3D_mE9A9544DF33CD0CCF4F1CA14994A2C436E4DF1F8(_thisAdjusted, ___value0, method);
 }
 #ifdef __clang__

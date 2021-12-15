@@ -7,35 +7,36 @@ public class ComputerTeam : AbstractTeam
     public override void TurnByComputer()
     {
         var perk = ChoosePerk();
+        PerkType perkType = perk.Type;
 
         if (perk.ApplyingEnergy > _currentActiveCharacter.Power)
         {
-            _currentActiveCharacter.SetAsUnChoosed();
             StartCoroutine(SimpleMeleeAttack(_currentActiveCharacter.Damage));
             ActivateTeamEndedEvent();
             return;
         }
 
-        if (perk.Type == PerkType.AttackOne)
+        if (perkType == PerkType.Attack)
         {
-            _currentActiveCharacter.SetActiveAttackPerk(perk);
-            int damage = _currentActiveCharacter.CalculateDamage();
-            if (perk.AttackType == AttackType.Distance)
+            if (perk.AttackType == AttackType.Meele)
             {
-                StartCoroutine(EndTurnAfterCastAndEffectEnd(damage, false, perk));
+                StartCoroutine(EndTurnAfterMeleeAtack(perk));
             }
-            else
+            else if (perk.AttackType == AttackType.Distance)
             {
-                StartCoroutine(EndTurnAfterMeleeAtack(damage, perk));
+                StartCoroutine(EndTurnAfterCastAndEffectEnd(perk));
             }
         }
-        else if (perk.Type == PerkType.Defense)
+        else if (perkType == PerkType.Defense)
         {
-            _currentActiveCharacter.SetActiveDefensePerk(perk);
-            StartCoroutine(EndTurnWithDelay(1f));
+            StartCoroutine(EndTurnAfterCastAndEffectEnd(perk));
+        }
+        else if (perkType == PerkType.Passive)
+        {
+            StartCoroutine(EndTurnAfterCastAndEffectEnd(perk));
         }
 
-        _currentActiveCharacter.SetAsUnChoosed();
+        _currentActiveCharacter.PerkBeenUsed(perk);
     }
 
     public override void TurnByPlayer(Perk perk)
@@ -52,12 +53,12 @@ public class ComputerTeam : AbstractTeam
 
         yield return new WaitUntil(() => StaticInfo.HalfMeleeAttackComplete == true);
 
-        _enemyTeam.DamageCharacter(damage);
+        _enemyTeam.DamageCharacter(_currentActiveCharacter.CalculateDamage(damage), "none");
 
         ActivateTeamEndedEvent();
     }
 
-    private IEnumerator EndTurnAfterMeleeAtack(int damage, Perk perk)
+    private IEnumerator EndTurnAfterMeleeAtack(Perk perk)
     {
         Vector3 startPos = GetCurrentActiveCharacter().gameObject.transform.position;
         Vector3 enemyPos = _enemyTeam.GetCharacterUnderAttack().gameObject.transform.position;
@@ -70,12 +71,12 @@ public class ComputerTeam : AbstractTeam
 
         yield return new WaitUntil(() => StaticInfo.PerkEffectFinished == true);
 
-        _enemyTeam.DamageCharacter(damage);
+        _perkSysytem.UsePerk(perk, _enemyTeam, _currentActiveCharacter, this);
 
         ActivateTeamEndedEvent();
     }
 
-    private IEnumerator EndTurnAfterCastAndEffectEnd(int damage, bool damageAll, Perk perk)
+    private IEnumerator EndTurnAfterCastAndEffectEnd(Perk perk)
     {
         Vector3 startPos = GetCurrentActiveCharacter().gameObject.transform.position;
         Vector3 enemyPos = _enemyTeam.GetCharacterUnderAttack().gameObject.transform.position;
@@ -88,15 +89,7 @@ public class ComputerTeam : AbstractTeam
 
         yield return new WaitUntil(() => StaticInfo.PerkEffectFinished == true);
 
-        if (damageAll == true) _enemyTeam.DamageAllCharacters(damage);
-        else _enemyTeam.DamageCharacter(damage);
-
-        ActivateTeamEndedEvent();
-    }
-
-    private IEnumerator EndTurnWithDelay(float sec)
-    {
-        yield return new WaitForSeconds(sec);
+        _perkSysytem.UsePerk(perk, _enemyTeam, _currentActiveCharacter, this);
 
         ActivateTeamEndedEvent();
     }

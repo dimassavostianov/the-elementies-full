@@ -26,6 +26,7 @@ public class SkillWheelUI : MonoBehaviour
     [SerializeField] private float _openAnimationSpeed;
     [SerializeField] private float _wheelRotationSpeed;
     [SerializeField] private float _startScale;
+    [SerializeField] private AnimationForDescription _animDesc;
 
     private const float _angleOffset = 45f;
     private int _currentIndex;
@@ -163,7 +164,7 @@ public class SkillWheelUI : MonoBehaviour
     {
         _shadePanel.PlayBackAnim();
         _backButton.SetActive(false);
-        _additionalInfo.SetActive(false);
+        _animDesc.StartClosingAnim();
         if (gameObject.activeSelf) StartCoroutine(CloseAnimation());
     }
 

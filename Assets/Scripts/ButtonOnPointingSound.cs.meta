@@ -3,7 +3,9 @@ guid: 4f581e894daa39a46bbd3a2627431192
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _soundPrefab: {instanceID: 0}
+  - _clip: {fileID: 8300000, guid: 621dcbb19abd5b24a8046ad17f185aa8, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
