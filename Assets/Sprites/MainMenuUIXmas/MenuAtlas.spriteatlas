@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MenuAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 881f2dd3d94df4e28a78d94cdef43787, type: 3}
+    totalSpriteSurfaceArea: 15648612
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: d22dd610945aa4fc9bdf4d801c29fa6e, type: 3}
+  - {fileID: 21300000, guid: 7120649068dfa4bac8256decaff02c02, type: 3}
+  - {fileID: 21300000, guid: 40ca42718e2e6452a95e53b81f316f5c, type: 3}
+  - {fileID: 21300000, guid: 2a7ed5b194b9a420fba69acc439d971f, type: 3}
+  - {fileID: 21300000, guid: 9e92a8b14d40340329c684fa1dac1872, type: 3}
+  - {fileID: 21300000, guid: b56ed2e17fb5c48cc8d1a9b31d0b2c46, type: 3}
+  - {fileID: 21300000, guid: 0d9975c226d2241278d08cb7921e22e3, type: 3}
+  - {fileID: 21300000, guid: bbb17303174eb491ba350c747d521472, type: 3}
+  - {fileID: 21300000, guid: 414847d3aa7ec4d1492beda9a647efee, type: 3}
+  - {fileID: 21300000, guid: 0756edb48c50548cdb99f38894f729ba, type: 3}
+  - {fileID: 21300000, guid: 671c72254be40467fb9ab8cbd8e06d06, type: 3}
+  - {fileID: 21300000, guid: ba3c2a45513ca446fb095de22dba9b14, type: 3}
+  - {fileID: 21300000, guid: dabf33650631f40d7ba9f2f564903c9c, type: 3}
+  - {fileID: 21300000, guid: 2a5386b5fe37f4faebcdedf1159be8e8, type: 3}
+  - {fileID: 21300000, guid: fe5c16d5f9de242288f9f9d0a798d7d2, type: 3}
+  - {fileID: 21300000, guid: 2e8ec3367195e47b2abd5c0184a7851c, type: 3}
+  - {fileID: 21300000, guid: 855dc4e6cc5054a139eb19bf80c02a85, type: 3}
+  - {fileID: 21300000, guid: 2e2ffe57a739f4cb0801b7435ebd1702, type: 3}
+  - {fileID: 21300000, guid: dbd903974e2bc49aa82d737590c4cf05, type: 3}
+  - {fileID: 21300000, guid: ce00bb972ca3d4d188a6847a495b0cb0, type: 3}
+  - {fileID: 21300000, guid: 8727cb285cdae4b47ba05c1017ddd358, type: 3}
+  - {fileID: 21300000, guid: 7812d9b92f81c464aaf098e0aba28cfc, type: 3}
+  - {fileID: 21300000, guid: 5427616ae7fe24b748b4c299c9308a6c, type: 3}
+  - {fileID: 21300000, guid: d9d5f7eb4340c44cb9f5386c52fd1166, type: 3}
+  - {fileID: 21300000, guid: 5e85fe6ce6aa1425bb41dfa02055ac0f, type: 3}
+  - {fileID: 21300000, guid: a907b9fc6d63840f3b3fb52cf49ab746, type: 3}
+  - {fileID: 21300000, guid: d0c8c33d3f45340ce814a17cc8c7981e, type: 3}
+  - {fileID: 21300000, guid: f71096cdb0f214111a468dfea0aa101c, type: 3}
+  - {fileID: 21300000, guid: 1b6df02e876804337b29ceb3a447fc3f, type: 3}
+  - {fileID: 21300000, guid: 9c275d9ecbf5243e7b38e09a7a54f735, type: 3}
+  - {fileID: 21300000, guid: 8d49daae174d6423d8634d0dc9abe346, type: 3}
+  - {fileID: 21300000, guid: 4963910f73d5e4a84b439bc7b98d76c2, type: 3}
+  - {fileID: 21300000, guid: bbec616f1c10e4ddf930ef741208c726, type: 3}
+  - {fileID: 21300000, guid: 90c3c57fc80f04586b7df3d5ca304630, type: 3}
+  - {fileID: 21300000, guid: dd6e0e8f4796f4fd997ea15c00781b30, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - light_5
+  - candy
+  - Button_red
+  - light_1
+  - totem
+  - top_panel
+  - light_3
+  - Settings_button
+  - Prezent_front
+  - button_3
+  - snowman
+  - Button_blue
+  - light_4
+  - background
+  - Button_yellow
+  - button_5
+  - right_panel
+  - element_1
+  - element_2
+  - default_avatar
+  - lights_line
+  - clouds
+  - lights_highlight
+  - button_2
+  - prezent_back
+  - button_6
+  - light_2
+  - element_3
+  - avatar_mask
+  - button_1
+  - button_4
+  - buttons_background
+  - Mock
+  - snowman_mask
+  - snow
+  m_RenderDataMap: {}
+  m_Tag: MenuAtlas
+  m_IsVariant: 0
