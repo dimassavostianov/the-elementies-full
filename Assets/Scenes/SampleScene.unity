@@ -4800,7 +4800,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5c17711971e1a1841ae418dc61c5aa17, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4712d7684d3a04f1d844a5426ee54d06, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -4898,8 +4898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e5af989336a0744b5700216542b1e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _battleMusic: {fileID: 8300000, guid: c48bdca0644faad4ea7fec5c94e2f2de, type: 3}
-  _peaceMusic: {fileID: 8300000, guid: 5c17711971e1a1841ae418dc61c5aa17, type: 3}
+  _battleMusic: {fileID: 8300000, guid: ace04732fdede4031a3022c4f1aa3b96, type: 3}
+  _peaceMusic: {fileID: 8300000, guid: 4712d7684d3a04f1d844a5426ee54d06, type: 3}
   audio: {fileID: 391252590}
 --- !u!1 &397072825
 GameObject:
