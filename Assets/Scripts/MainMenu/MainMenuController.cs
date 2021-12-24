@@ -10,6 +10,12 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private VictoryMenu _victoryMenu;
     [SerializeField] private SceneTransitionShadePanel _transitionShadePanel;
     [SerializeField] private BackMusic _music;
+    [SerializeField] private ParticleSystem _snowParticle;
+
+    private void Start()
+    {
+        _snowParticle.Play();
+    }
 
     public void ShowBattleMenu()
     {
