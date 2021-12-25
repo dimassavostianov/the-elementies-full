@@ -78,6 +78,7 @@ public class MainMenuController : MonoBehaviour
         _elementiesMenu.SetActive(false);
         _victoryMenu.gameObject.SetActive(false);
         _music.PlayPeaceMusic();
+        _snowParticle.Play();
     }
 
     private IEnumerator ShowLooseMenuAfterShdingAnimation(Character[] characters)

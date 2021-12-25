@@ -61,6 +61,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 8727cb285cdae4b47ba05c1017ddd358, type: 3}
   - {fileID: 21300000, guid: 7812d9b92f81c464aaf098e0aba28cfc, type: 3}
   - {fileID: 21300000, guid: 5427616ae7fe24b748b4c299c9308a6c, type: 3}
+  - {fileID: 21300000, guid: f5b2c7cbc026a4d448f54d329a3d3141, type: 3}
   - {fileID: 21300000, guid: d9d5f7eb4340c44cb9f5386c52fd1166, type: 3}
   - {fileID: 21300000, guid: 5e85fe6ce6aa1425bb41dfa02055ac0f, type: 3}
   - {fileID: 21300000, guid: a907b9fc6d63840f3b3fb52cf49ab746, type: 3}
@@ -98,6 +99,7 @@ SpriteAtlas:
   - lights_line
   - clouds
   - lights_highlight
+  - snow_2
   - button_2
   - prezent_back
   - button_6
